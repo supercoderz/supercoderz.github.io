@@ -6,12 +6,12 @@ comments: false
 categories:
 ---
 
-<div class="zemanta-img">
+<div >
 
 [caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:ChangeManagementAttivit%C3%A0.jpg"><img title="The Change Management Process's Activities" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/ChangeManagementAttivit%C3%A0.jpg/300px-ChangeManagementAttivit%C3%A0.jpg" alt="The Change Management Process's Activities" width="300" height="60" /></a>[/caption]
 
 </div>
-Some of us have seen <a class="zem_slink" title="Dexter's Lab" href="http://www.cartoonnetwork.com/tv_shows/dexter/" rel="hulu">Dexter's lab</a> on cartoon network as kinds and some of us have seen something like this in a movie or somewhere else - an elaborate setup where a small action like opening a door starts a process, a ball drops, it moves a lever which in turn starts a flow of water through a set of twisting and turning test tubes which does something else and finally after a long route some small result happens like a bulb glowing or a trap door opening. If it was setup by a bad guy in a movie then it probably kills someone or something bad. I forget what it is called but its an elaborate setup to achieve something which is a small goal compared to what must have gone in to build the setup.
+Some of us have seen <a  title="Dexter's Lab" href="http://www.cartoonnetwork.com/tv_shows/dexter/" rel="hulu">Dexter's lab</a> on cartoon network as kinds and some of us have seen something like this in a movie or somewhere else - an elaborate setup where a small action like opening a door starts a process, a ball drops, it moves a lever which in turn starts a flow of water through a set of twisting and turning test tubes which does something else and finally after a long route some small result happens like a bulb glowing or a trap door opening. If it was setup by a bad guy in a movie then it probably kills someone or something bad. I forget what it is called but its an elaborate setup to achieve something which is a small goal compared to what must have gone in to build the setup.
 
 This is exactly what change management sometimes feels like.
 
@@ -20,7 +20,7 @@ This is exactly what change management sometimes feels like.
 We all make changes on our software everyday. We might do a big release once in a quarter or once in a year but we make changes most often. Some enhancement, some improvement, some fix for a scenario that we did not think about or some weird bug that happened when the user logged in from home and entered the input using a Japanese keyboard. But we do make changes. Sometimes there are emergency changes when there is a production issue and sometimes we sneak in a change to control the damage before anyone notices.
 
 Changes come in all priorities and some need lots of preparation, some need a system outage and some are plain stupid changes that can be done in sleep. However, all of these can impact the software and all the other components that interact with that. and sometimes these changes can cause more problems than they solve because of conflicts and bugs etc. This is where change management comes in - it tries to mitigate the risk of changes by managing what goes in.
-<h3><a class="zem_slink" title="Change management" href="http://en.wikipedia.org/wiki/Change_management" rel="wikipedia">Change Management</a></h3>
+<h3><a  title="Change management" href="http://en.wikipedia.org/wiki/Change_management" rel="wikipedia">Change Management</a></h3>
 Change management is no silver bullet magic process that solves all problems on its own. It is a set of rules and practices that work on known parameters and try to asses the risk of a change. These parameters include
 <ul>
 	<li>What is the change?</li>
@@ -53,7 +53,7 @@ Different organizations take different approaches to avoiding these kind of issu
 </ul>
 <div>Very few places have such strict controls that you completely give up making changes and even fewer places give you the freedom that you deploy a change and then go 'oops! I just deployed it'. But they all make your life difficult.</div>
 <div>While these are all supposed to be for the good of all of us and help us make the system stable and reliable and all those goody goody things, they do become a pain when you want to implement a small change like editing a file. Or when the business does not see why you cannot get a change done yesterday. Sometimes you might be the only guy and have to juggle all these; sometimes the change manager might be in a different time zone 14 hours behind you.</div>
-<div>Writing a <a class="zem_slink" title="Application software" href="http://en.wikipedia.org/wiki/Application_software" rel="wikipedia">software application</a> is a small job than going through all these processes - or like my example at the beginning , an elaborate setup or trap - to get that change deployed. Worst case it might get rejected after all this and worst still is when what got rejected after all the pains is a small edit to an <a class="zem_slink" title="XML" href="http://en.wikipedia.org/wiki/XML" rel="wikipedia">XML</a> file!</div>
+<div>Writing a <a  title="Application software" href="http://en.wikipedia.org/wiki/Application_software" rel="wikipedia">software application</a> is a small job than going through all these processes - or like my example at the beginning , an elaborate setup or trap - to get that change deployed. Worst case it might get rejected after all this and worst still is when what got rejected after all the pains is a small edit to an <a  title="XML" href="http://en.wikipedia.org/wiki/XML" rel="wikipedia">XML</a> file!</div>
 <h3>Is there no middle ground that is less painful?</h3>
 Organizations run IT for making more money with their core business and stability is the key to making more money which in turn pays for IT - so it is unlikely that the business will one day start allowing ad-hoc changes at the whim and fancy of IT. What probably can be done is that we could use different scales to measure different types of changes - and cause different levels of pain in implementing them. This is actually tried in some organizations and works in a subset of those.
 

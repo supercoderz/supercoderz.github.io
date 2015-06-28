@@ -6,7 +6,7 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="147" caption="Flow of data in a typical parser (Photo credit: Wikipedia)"]<a href="http://en.wikipedia.org/wiki/File:Parser_Flow.gif" target="_blank"><img class="zemanta-img-inserted zemanta-img-configured" title="Flow of data in a typical parser" src="http://upload.wikimedia.org/wikipedia/en/a/a9/Parser_Flow.gif" alt="Flow of data in a typical parser" width="147" height="409" /></a>[/caption]
+[caption id="" align="alignright" width="147" caption="Flow of data in a typical parser (Photo credit: Wikipedia)"]<a href="http://en.wikipedia.org/wiki/File:Parser_Flow.gif" target="_blank"><img  title="Flow of data in a typical parser" src="http://upload.wikimedia.org/wikipedia/en/a/a9/Parser_Flow.gif" alt="Flow of data in a typical parser" width="147" height="409" /></a>[/caption]
 
 If you walked past most programmers these days and asked what is it that they were coding for then the likely answers would be - business requirement, use case, user story, bug fix - maybe a few more, but very few of them will say that they are coding to solve a problem. You may ask if it really matters, i think it does impact how we think about the solution.
 
@@ -18,7 +18,7 @@ This post aims to understand the different aspects of how a problem can be broke
 
 <!--more-->
 <h3>From problem to a program</h3>
-When I first started programming, we were told that a program is a set of steps, an algorithm, which ultimately solves the problem. And this can be repeated again and again. Notice that this definition that we were given does not have <a class="zem_slink" title="Object-oriented programming" href="http://en.wikipedia.org/wiki/Object-oriented_programming" rel="wikipedia" target="_blank">OOP</a> or any high level abstraction in it - it is just a few steps that solve a problem. We were also told that as the steps become longer, or repetitive, you could create a <a class="zem_slink" title="Subroutine" href="http://en.wikipedia.org/wiki/Subroutine" rel="wikipedia" target="_blank">sub routine</a> and call that in the main program. This was the old procedural world and I used <a class="zem_slink" title="BASIC" href="http://en.wikipedia.org/wiki/BASIC" rel="wikipedia" target="_blank">BASIC</a>, <a class="zem_slink" title="Comparison of Pascal and C" href="http://en.wikipedia.org/wiki/Comparison_of_Pascal_and_C" rel="wikipedia" target="_blank">PASCAL and C</a> in those days.
+When I first started programming, we were told that a program is a set of steps, an algorithm, which ultimately solves the problem. And this can be repeated again and again. Notice that this definition that we were given does not have <a  title="Object-oriented programming" href="http://en.wikipedia.org/wiki/Object-oriented_programming" rel="wikipedia" target="_blank">OOP</a> or any high level abstraction in it - it is just a few steps that solve a problem. We were also told that as the steps become longer, or repetitive, you could create a <a  title="Subroutine" href="http://en.wikipedia.org/wiki/Subroutine" rel="wikipedia" target="_blank">sub routine</a> and call that in the main program. This was the old procedural world and I used <a  title="BASIC" href="http://en.wikipedia.org/wiki/BASIC" rel="wikipedia" target="_blank">BASIC</a>, <a  title="Comparison of Pascal and C" href="http://en.wikipedia.org/wiki/Comparison_of_Pascal_and_C" rel="wikipedia" target="_blank">PASCAL and C</a> in those days.
 
 What this did was to embed deeply in our heads to think of everything as a set of steps - you always have an input that goes through a set of steps, each of which could be one line or a sub routine and then finally ends up in a result. We did basic programs in these languages and then moved to hierarchical databases like DBASE and FOXPRO, and even there we applied pretty much the same principles. Additionally we learnt to accept the fact that data can be stored in tables instead of variables.
 
@@ -28,10 +28,10 @@ What I am getting to here is that at a low level, it is all a set of steps. If y
 <h3>Breaking down the problem - an example</h3>
 If we agree that every requirement in computer science is a problem, then in order to solve it, it has to be broken down into the correct number of steps with sufficient granularity.
 
-For example, lets us consider a string message that represents data related to a <a class="zem_slink" title="Business" href="http://en.wikipedia.org/wiki/Business" rel="wikipedia" target="_blank">business entity</a> in your application. This is just a small part of the whole application. This message can be received by any means - socket, <a class="zem_slink" title="Message queue" href="http://en.wikipedia.org/wiki/Message_queue" rel="wikipedia" target="_blank">message queue</a>, file etc. You need to convert this string message into a hash map that can be later used in the application. Lets look at the following breakdown of this problem
+For example, lets us consider a string message that represents data related to a <a  title="Business" href="http://en.wikipedia.org/wiki/Business" rel="wikipedia" target="_blank">business entity</a> in your application. This is just a small part of the whole application. This message can be received by any means - socket, <a  title="Message queue" href="http://en.wikipedia.org/wiki/Message_queue" rel="wikipedia" target="_blank">message queue</a>, file etc. You need to convert this string message into a hash map that can be later used in the application. Lets look at the following breakdown of this problem
 <ol>
 	<li>Get the message from the input</li>
-	<li><a class="zem_slink" title="Parsing" href="http://en.wikipedia.org/wiki/Parsing" rel="wikipedia" target="_blank">Parse</a> the message into its constituent parts</li>
+	<li><a  title="Parsing" href="http://en.wikipedia.org/wiki/Parsing" rel="wikipedia" target="_blank">Parse</a> the message into its constituent parts</li>
 	<li>Identify each part and translate that to a field your application can later use</li>
 	<li>Pass the set of fields and the values to the rest of the application</li>
 </ol>
@@ -43,7 +43,7 @@ This is very high level. Lets tackle each of these in turn. First, getting the i
 </ol>
 Next, parsing the message
 <ol>
-	<li>If you are receiving data from someone, there will be a spec for the data representation - check that and identify the <a class="zem_slink" title="Data" href="http://en.wikipedia.org/wiki/Data" rel="wikipedia" target="_blank">data format</a> and the delimiter</li>
+	<li>If you are receiving data from someone, there will be a spec for the data representation - check that and identify the <a  title="Data" href="http://en.wikipedia.org/wiki/Data" rel="wikipedia" target="_blank">data format</a> and the delimiter</li>
 	<li>Break the string into a set of smaller strings based on the delimiter</li>
 	<li>If these smaller strings are smaller messages then parse them as well - repeat this until you have a set of unit strings that do not need any further processing. Each of these should represent one piece of information</li>
 	<li>Check if there are any header or footer parts and mark them as such</li>
@@ -66,7 +66,7 @@ Sending the data to the application
 	<li>If there is any other approach for data distribution, then insert the data using that</li>
 </ol>
 That was quite a few right? This definitely is more clean and clear than for example business statement - take the message from the source and make it available to the application. Also each step is very clear in terms of what needs to be done. There is less ambiguity and so less chance to make a mistake.
-<h3><a class="zem_slink" title="Unit testing" href="http://en.wikipedia.org/wiki/Unit_testing" rel="wikipedia" target="_blank">Unit Testing</a> is easy when you break down correctly</h3>
+<h3><a  title="Unit testing" href="http://en.wikipedia.org/wiki/Unit_testing" rel="wikipedia" target="_blank">Unit Testing</a> is easy when you break down correctly</h3>
 These days when test driven development and continuous builds are he recommended approaches, having the problem broken down so explicitly is very convenient to testing - you know exactly what to test for each part and once all the parts are tested, you can rest assured that the sum total of this will work correctly.
 
 Also, when changes are made to each part - for example parsing the message - as long as it is properly isolated from the other parts, you have to worry very little about the impact of these changes on rest of the parts. This will help you concentrate more of your testing on the core change you are making and then you can quickly validate the full application.

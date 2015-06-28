@@ -6,11 +6,11 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:UML_DP_Proxy.png" target="_blank"><img class="zemanta-img-inserted zemanta-img-configured" title="UML Class Diagram of the Proxy Design Pattern" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UML_DP_Proxy.png/300px-UML_DP_Proxy.png" alt="UML Class Diagram of the Proxy Design Pattern" width="300" height="192" /></a> UML Class Diagram of the Proxy Design Pattern (Photo credit: Wikipedia)[/caption]
+[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:UML_DP_Proxy.png" target="_blank"><img  title="UML Class Diagram of the Proxy Design Pattern" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UML_DP_Proxy.png/300px-UML_DP_Proxy.png" alt="UML Class Diagram of the Proxy Design Pattern" width="300" height="192" /></a> UML Class Diagram of the Proxy Design Pattern (Photo credit: Wikipedia)[/caption]
 
-Most of us, if not all, have written unit tests for our code using <a class="zem_slink" title="JUnit" href="http://junit.sourceforge.net" rel="homepage" target="_blank">JUnit</a> or comparable tools. In most cases we are in control of what is being tested and we can provide all the inputs that are needed to test the scenario. But then there are cases where there are external factors or classes that cannot be instantiated for tests and we need to find ways to simulate them - the suggested approach is to use <a class="zem_slink" title="Mock object" href="http://en.wikipedia.org/wiki/Mock_object" rel="wikipedia" target="_blank">mock objects</a>.
+Most of us, if not all, have written unit tests for our code using <a  title="JUnit" href="http://junit.sourceforge.net" rel="homepage" target="_blank">JUnit</a> or comparable tools. In most cases we are in control of what is being tested and we can provide all the inputs that are needed to test the scenario. But then there are cases where there are external factors or classes that cannot be instantiated for tests and we need to find ways to simulate them - the suggested approach is to use <a  title="Mock object" href="http://en.wikipedia.org/wiki/Mock_object" rel="wikipedia" target="_blank">mock objects</a>.
 
-There are many frameworks like <a class="zem_slink" title="EasyMock" href="http://www.easymock.org/" rel="homepage" target="_blank">EasyMock</a> which help create mock objects for classes and interfaces.
+There are many frameworks like <a  title="EasyMock" href="http://www.easymock.org/" rel="homepage" target="_blank">EasyMock</a> which help create mock objects for classes and interfaces.
 
 How do they mock objects? Turns out it is not magic.
 
@@ -22,7 +22,7 @@ So when we say that we are interacting with a proxy object, it means that we are
 
 Proxies can be created using many libraries, but we will not get into that - instead we will see how easy it is to create a proxy of any class in simple Java.
 <h2>Proxy and InvocationHandler</h2>
-The <a class="zem_slink" title="Proxy pattern" href="http://en.wikipedia.org/wiki/Proxy_pattern" rel="wikipedia" target="_blank">Proxy class</a> in <a class="zem_slink" title="Java Development Kit" href="https://jdk6.dev.java.net/" rel="homepage" target="_blank">Java SDK</a> provides the mechanism to create a proxy instance of any interface - it has a newProxyInstance method which takes a <a class="zem_slink" title="Java Classloader" href="http://en.wikipedia.org/wiki/Java_Classloader" rel="wikipedia" target="_blank">class loader</a>, a set of interfaces and a invocation handler to create a proxy. The invocation handler is an object to which all the method calls on the proxy are delegated to.
+The <a  title="Proxy pattern" href="http://en.wikipedia.org/wiki/Proxy_pattern" rel="wikipedia" target="_blank">Proxy class</a> in <a  title="Java Development Kit" href="https://jdk6.dev.java.net/" rel="homepage" target="_blank">Java SDK</a> provides the mechanism to create a proxy instance of any interface - it has a newProxyInstance method which takes a <a  title="Java Classloader" href="http://en.wikipedia.org/wiki/Java_Classloader" rel="wikipedia" target="_blank">class loader</a>, a set of interfaces and a invocation handler to create a proxy. The invocation handler is an object to which all the method calls on the proxy are delegated to.
 
 The InvocationHandler interface has a single method called invoke which gets called with the proxy object, the method to be called and the arguments. This method is supposed to return a value compatible with the method being invoked - if it returns anything else then an exception will be thrown.
 
@@ -38,9 +38,9 @@ An implementation of this interface
 
 package com.supercoderz.proxy;
 public class TestImpl implements Test {
-    <a class="zem_slink" title="Annotation" href="http://en.wikipedia.org/wiki/Annotation" rel="wikipedia" target="_blank">@Override</a>
+    <a  title="Annotation" href="http://en.wikipedia.org/wiki/Annotation" rel="wikipedia" target="_blank">@Override</a>
     public int getInt() {
-        // TODO Auto-generated <a class="zem_slink" title="Method stub" href="http://en.wikipedia.org/wiki/Method_stub" rel="wikipedia" target="_blank">method stub</a>
+        // TODO Auto-generated <a  title="Method stub" href="http://en.wikipedia.org/wiki/Method_stub" rel="wikipedia" target="_blank">method stub</a>
          return 0;
     }
     @Override
@@ -69,7 +69,7 @@ public class ProxyHandler implements InvocationHandler {
     }
 }
 
-So how do we use this? Below example show a simple factory method to create this and a sample code on how you can use this transparently in your code. (The <a class="zem_slink" title="Factory method pattern" href="http://en.wikipedia.org/wiki/Factory_method_pattern" rel="wikipedia" target="_blank">factory class</a> code is not shown in full here).
+So how do we use this? Below example show a simple factory method to create this and a sample code on how you can use this transparently in your code. (The <a  title="Factory method pattern" href="http://en.wikipedia.org/wiki/Factory_method_pattern" rel="wikipedia" target="_blank">factory class</a> code is not shown in full here).
 public static Test getInstance() {
     TestImpl test = new TestImpl();
     Test proxy = (Test) Proxy.newProxyInstance(Test.class.getClassLoader(),
@@ -90,7 +90,7 @@ What we will do is create an invocation handler that understands that we are cre
 package com.supercoderz.proxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.<a class="zem_slink" title="Hash table" href="http://en.wikipedia.org/wiki/Hash_table" rel="wikipedia" target="_blank">HashMap</a>;
+import java.util.<a  title="Hash table" href="http://en.wikipedia.org/wiki/Hash_table" rel="wikipedia" target="_blank">HashMap</a>;
 import java.util.Map;
 public class MockProxyHandler implements InvocationHandler {
     Map&lt;String, Object&gt; expectations = new HashMap&lt;String, Object&gt;();

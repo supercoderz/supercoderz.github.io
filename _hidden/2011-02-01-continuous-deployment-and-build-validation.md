@@ -6,12 +6,12 @@ comments: false
 categories:
 ---
 
-<div class="zemanta-img">
+<div >
 
 [caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Hudson_Screenshot.png"><img title="Hudson Screenshot" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Hudson_Screenshot.png/300px-Hudson_Screenshot.png" alt="Hudson Screenshot" width="300" height="232" /></a>[/caption]
 
 </div>
-One of the recommended and widely followed practices in agile and fast paced projects is to use a continuous build system. Usually this is a <a class="zem_slink" title="CruiseControl" href="http://cruisecontrol.sourceforge.net" rel="homepage">CruiseControl</a> or <a class="zem_slink" title="Hudson (software)" href="http://hudson-ci.org" rel="homepage">Hudson</a> or some such build tool hooked into the source control system and scheduled to build periodically. With a disciplined team of developers who test their code and do not commit code that does not work and breaks everyones builds, this is a good thing.
+One of the recommended and widely followed practices in agile and fast paced projects is to use a continuous build system. Usually this is a <a  title="CruiseControl" href="http://cruisecontrol.sourceforge.net" rel="homepage">CruiseControl</a> or <a  title="Hudson (software)" href="http://hudson-ci.org" rel="homepage">Hudson</a> or some such build tool hooked into the source control system and scheduled to build periodically. With a disciplined team of developers who test their code and do not commit code that does not work and breaks everyones builds, this is a good thing.
 
 But does this solve all problems?
 
@@ -32,7 +32,7 @@ We came up with  a solution that tries to mitigate these minor, but downright e
 	<li>Draw up a list of all valid values and names that we can have</li>
 	<li>Make a list of all similar sounding values and names that can break the thing</li>
 	<li>Identified all the things that we check manually and the expected and normal values for them</li>
-	<li>We then built a script using <a class="zem_slink" title="Groovy (programming language)" href="http://groovy.codehaus.org" rel="homepage">Groovy</a> that reads through our entire deployment directory structure and validates based on the above</li>
+	<li>We then built a script using <a  title="Groovy (programming language)" href="http://groovy.codehaus.org" rel="homepage">Groovy</a> that reads through our entire deployment directory structure and validates based on the above</li>
 	<li>This script is plugged into our ant build</li>
 	<li>Few times a day, our Hudson jobs kick in and run a build of the entire code</li>
 	<li>This triggers another job which does a mock deploy on a local folder.</li>
@@ -42,4 +42,4 @@ We came up with  a solution that tries to mitigate these minor, but downright e
 </ul>
 This kind of continuous deployment and validation, in addition to the build and testing has helped us by identifying some issues that could have been really touch to get out of without embarassing ourselves.
 
-We used Groovy because it was familiar to us. It could have been <a class="zem_slink" title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a>, Ruby or even a shell script. The main thing here was to identify  the checks that will mean a successful deployment without actually starting the application. This check performed regularly will mean that post deployment when we start the application, the chance of a silly error like a missing or incorrectly named file is very less. What is left is a major issue like connectivity or more severe bugs which mean that the release is anyways dead.
+We used Groovy because it was familiar to us. It could have been <a  title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a>, Ruby or even a shell script. The main thing here was to identify  the checks that will mean a successful deployment without actually starting the application. This check performed regularly will mean that post deployment when we start the application, the chance of a silly error like a missing or incorrectly named file is very less. What is left is a major issue like connectivity or more severe bugs which mean that the release is anyways dead.

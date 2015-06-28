@@ -6,7 +6,7 @@ comments: false
 categories:
 ---
 
-If you are working in technology, and have been working for a long time, then you definitely have an arsenal of preferred tools that you would like to use to solve your everyday problems. Depending on what you do this could be a set of <a class="zem_slink" title="Programming language" href="http://en.wikipedia.org/wiki/Programming_language" rel="wikipedia">programming languages</a>, vendor products, custom scripts or even plain excel spreadsheets. At the end of the day these tools help you achieve the results that help the business that your IT helps run.
+If you are working in technology, and have been working for a long time, then you definitely have an arsenal of preferred tools that you would like to use to solve your everyday problems. Depending on what you do this could be a set of <a  title="Programming language" href="http://en.wikipedia.org/wiki/Programming_language" rel="wikipedia">programming languages</a>, vendor products, custom scripts or even plain excel spreadsheets. At the end of the day these tools help you achieve the results that help the business that your IT helps run.
 
 As time goes by, every technology either gets outdated because new versions or better technologies have emerged, or there is a need to radically change the way you run your IT so that the business can so what it does best even better - make more money. So there is always a push from the management to go for better and more efficient technologies.
 
@@ -51,6 +51,6 @@ So how can we do that? Simple -
 	<li>Be willing to be proved wrong.</li>
 	<li>Have data points to quantify the amount of saving or improvement your approach provides - no one can refute data, unless its obviously faked.</li>
 </ul>
-These are not things that I cooked up over a lazy afternoon - we used many of these. and free beer too, but mainly these. I tried to sell someone that I will build a string based <a class="zem_slink" title="XML" href="http://en.wikipedia.org/wiki/XML" rel="wikipedia">XML parser</a> for their problem. That guy laughed at me - OK fine, I told him the issues with his approach, explained mine, built a prototype, compared metrics and that's it - I had the keys to the kingdom and we did it. What was initially a stupid idea shaved 200 milliseconds off of our critical flow in the application.
+These are not things that I cooked up over a lazy afternoon - we used many of these. and free beer too, but mainly these. I tried to sell someone that I will build a string based <a  title="XML" href="http://en.wikipedia.org/wiki/XML" rel="wikipedia">XML parser</a> for their problem. That guy laughed at me - OK fine, I told him the issues with his approach, explained mine, built a prototype, compared metrics and that's it - I had the keys to the kingdom and we did it. What was initially a stupid idea shaved 200 milliseconds off of our critical flow in the application.
 
 Its all doable - but its up to you whether you do it the hard way or the nice way.

@@ -6,12 +6,12 @@ comments: false
 categories:
 ---
 
-<div class="zemanta-img">
+<div >
 
 [caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Rack001.jpg"><img title="A typical server &quot;rack&quot;, commonly se..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Rack001.jpg/300px-Rack001.jpg" alt="A typical server &quot;rack&quot;, commonly se..." width="300" height="400" /></a>[/caption]
 
 </div>
-We all have heard about <a class="zem_slink" title="Grid computing" href="http://en.wikipedia.org/wiki/Grid_computing" rel="wikipedia">grid computing</a>. If you have a computer science degree, then you probably have had a paper on this subject and maybe built or worked on a grid in your college. Grid computing can be simply defined as distributing a large <a class="zem_slink" title="Task (computing)" href="http://en.wikipedia.org/wiki/Task_%28computing%29" rel="wikipedia">task</a> over a large number of computers so that they can all execute the task <a class="zem_slink" title="Series and parallel circuits" href="http://en.wikipedia.org/wiki/Series_and_parallel_circuits" rel="wikipedia">in parallel</a> and we get the result quickly.  And we all know that grids are complicated - you have to create a task, you have to submit it to a master <a class="zem_slink" title="Server (computing)" href="http://en.wikipedia.org/wiki/Server_%28computing%29" rel="wikipedia">server</a> that sends it to one of the many workers, it collects the results, checks for failures, automatically executes failed jobs, puts all required resources in shared locations, provides a monitoring console etc etc etc. In short, its not simple. It can be built by guru's and we use it.
+We all have heard about <a  title="Grid computing" href="http://en.wikipedia.org/wiki/Grid_computing" rel="wikipedia">grid computing</a>. If you have a computer science degree, then you probably have had a paper on this subject and maybe built or worked on a grid in your college. Grid computing can be simply defined as distributing a large <a  title="Task (computing)" href="http://en.wikipedia.org/wiki/Task_%28computing%29" rel="wikipedia">task</a> over a large number of computers so that they can all execute the task <a  title="Series and parallel circuits" href="http://en.wikipedia.org/wiki/Series_and_parallel_circuits" rel="wikipedia">in parallel</a> and we get the result quickly.  And we all know that grids are complicated - you have to create a task, you have to submit it to a master <a  title="Server (computing)" href="http://en.wikipedia.org/wiki/Server_%28computing%29" rel="wikipedia">server</a> that sends it to one of the many workers, it collects the results, checks for failures, automatically executes failed jobs, puts all required resources in shared locations, provides a monitoring console etc etc etc. In short, its not simple. It can be built by guru's and we use it.
 
 From the point of view of a non computer science guy, this picture seems pretty reasonable to me. But is it really the case?
 
@@ -21,15 +21,15 @@ Before we begin, lets outline the key basics of a grid that we can read from any
 <ul>
 	<li>The workers on the grid each execute a small and definite task that does not depend on other tasks and can be completed by itself</li>
 	<li>The entire task is large enough and each individual task takes long enough time that it has to be executed in parallel to achieve best results.</li>
-	<li>All the workers have access to all the <a class="zem_slink" title="Library" href="http://en.wikipedia.org/wiki/Library" rel="wikipedia">libraries</a> that are required to complete the task.</li>
+	<li>All the workers have access to all the <a  title="Library" href="http://en.wikipedia.org/wiki/Library" rel="wikipedia">libraries</a> that are required to complete the task.</li>
 	<li>Any input that is required for the task can be received without a contention with any of the other workers.</li>
 	<li>There is a master process that sends tasks to each worker and collects the results.</li>
 </ul>
 There are a few more, but we will limit ourselves to these key ones.
 <h3><span class="Apple-style-span" style="font-size:15px;font-weight:bold;">Choice of technologies to build the grid</span></h3>
-<div>Our aim is to show that we can build a simple grid - not to showcase the various grid frameworks out there. So in order to keep this very simple, we will build this in <a class="zem_slink" title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a>. The choice of Python is because it provides the necessary tools to build the server components without much effort using just the standard library that comes in the default installation and also provides good libraries for the other functionality that we need.</div>
+<div>Our aim is to show that we can build a simple grid - not to showcase the various grid frameworks out there. So in order to keep this very simple, we will build this in <a  title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a>. The choice of Python is because it provides the necessary tools to build the server components without much effort using just the standard library that comes in the default installation and also provides good libraries for the other functionality that we need.</div>
 <h3><span class="Apple-style-span" style="font-size:15px;font-weight:bold;">The problem</span></h3>
-<div>We need a problem that is suitable to be run in parallel. Whatever the problem maybe, it has to be easily divisible into tasks. For our grid, we will use the following method as the task. This method calculates the sum of the first 'n' <a class="zem_slink" title="Fibonacci number" href="http://en.wikipedia.org/wiki/Fibonacci_number" rel="wikipedia">Fibonacci numbers</a>. The implementation here is not the best approach - this is chosen because it takes a lot of time. This was taken from an example on the internet.</div>
+<div>We need a problem that is suitable to be run in parallel. Whatever the problem maybe, it has to be easily divisible into tasks. For our grid, we will use the following method as the task. This method calculates the sum of the first 'n' <a  title="Fibonacci number" href="http://en.wikipedia.org/wiki/Fibonacci_number" rel="wikipedia">Fibonacci numbers</a>. The implementation here is not the best approach - this is chosen because it takes a lot of time. This was taken from an example on the internet.</div>
 <pre style="padding-left:30px;">def fibonacci(n):
     if n&lt;=1:
         return 1
@@ -37,16 +37,16 @@ There are a few more, but we will limit ourselves to these key ones.
         return fibonacci(n-1)+fibonacci(n-2)</pre>
 This code works fast up to n=30, after that it takes a very long time to execute and trying to calculate the sum for anything above 30 is something we can do in parallel. You can try running this code in your Python editor and you can see how long it takes. If you do two calculations for n=40 one after the other then it will take a very long time to execute.
 
-We will build a grid that can take multiple <a class="zem_slink" title="Capital punishment" href="http://en.wikipedia.org/wiki/Capital_punishment" rel="wikipedia">executions</a> of this code and run them in parallel.
+We will build a grid that can take multiple <a  title="Capital punishment" href="http://en.wikipedia.org/wiki/Capital_punishment" rel="wikipedia">executions</a> of this code and run them in parallel.
 <h3><span class="Apple-style-span" style="font-size:15px;font-weight:bold;">The solution architecture</span></h3>
-<div>We will build a server which will function as the worker. The job of the server will be to receive the task and execute it, and return the result. Simple. We will build this server using <a class="zem_slink" title="XML-RPC" href="http://en.wikipedia.org/wiki/XML-RPC" rel="wikipedia">XML RPC</a> module which is part of the Python standard library. This server will:</div>
+<div>We will build a server which will function as the worker. The job of the server will be to receive the task and execute it, and return the result. Simple. We will build this server using <a  title="XML-RPC" href="http://en.wikipedia.org/wiki/XML-RPC" rel="wikipedia">XML RPC</a> module which is part of the Python standard library. This server will:</div>
 <div>
 <ul>
 	<li>Start on a given port and register a method which can be invoked remotely</li>
 	<li>This method will accept the task and the value of n, and execute the code</li>
 	<li>Once the task is completed, it will return the value.</li>
 </ul>
-<div>The <a class="zem_slink" title="Client (computing)" href="http://en.wikipedia.org/wiki/Client_%28computing%29" rel="wikipedia">client</a> will be a simple XML RPC client that will connect to the server and submit the task. When we have more than one server, the client will submit the task to one of the many servers. The client will</div>
+<div>The <a  title="Client (computing)" href="http://en.wikipedia.org/wiki/Client_%28computing%29" rel="wikipedia">client</a> will be a simple XML RPC client that will connect to the server and submit the task. When we have more than one server, the client will submit the task to one of the many servers. The client will</div>
 <div>
 <ul>
 	<li>Connect to a server using a proxy</li>

@@ -6,15 +6,15 @@ comments: false
 categories:
 ---
 
-Lets admit it - writing an application in Java takes a lot more code lines and configuration than in other languages like <a class="zem_slink" title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a> or Ruby. However, Java has been around for many years and it will stay around for many years simply because of the number of applications in various enterprises built around Java. However, of late with the new kid's on the block like Rails, Django and all these rapid development paradigms that are out there, poor Java programmers do feel left out. Of course we have Groovy that is borne out of Java and a couple of such options, we do have to stick to Java and the different Java frameworks like Spring, Hibernate etc for our day jobs.
+Lets admit it - writing an application in Java takes a lot more code lines and configuration than in other languages like <a  title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a> or Ruby. However, Java has been around for many years and it will stay around for many years simply because of the number of applications in various enterprises built around Java. However, of late with the new kid's on the block like Rails, Django and all these rapid development paradigms that are out there, poor Java programmers do feel left out. Of course we have Groovy that is borne out of Java and a couple of such options, we do have to stick to Java and the different Java frameworks like Spring, Hibernate etc for our day jobs.
 
 &nbsp;
 
-There are different ways in which you can build a <a class="zem_slink" title="Java (software platform)" href="http://www.java.com" rel="homepage">Java application</a> correctly using the age old known best practices and get the rapid development and agility that you want. In this blog I will describe a probably known but less frequently used way to add more agility to your Java applications. This could be used for web or non-web Java applications alike.
+There are different ways in which you can build a <a  title="Java (software platform)" href="http://www.java.com" rel="homepage">Java application</a> correctly using the age old known best practices and get the rapid development and agility that you want. In this blog I will describe a probably known but less frequently used way to add more agility to your Java applications. This could be used for web or non-web Java applications alike.
 <h3><!--more-->So whats the silver bullet?</h3>
 &nbsp;
 
-Its not really a silver bullet, and it has been around for a while - its the <a class="zem_slink" title="Scripting for the Java Platform" href="http://en.wikipedia.org/wiki/Scripting_for_the_Java_Platform" rel="wikipedia">JSR-223</a> Java Scripting extension. This part of Java, available under the javax.script package enables developers to embed a scripting language of their choice in the Java application and let it execute scripts. These scripts can be user entered or maybe loaded from a file or socket.
+Its not really a silver bullet, and it has been around for a while - its the <a  title="Scripting for the Java Platform" href="http://en.wikipedia.org/wiki/Scripting_for_the_Java_Platform" rel="wikipedia">JSR-223</a> Java Scripting extension. This part of Java, available under the javax.script package enables developers to embed a scripting language of their choice in the Java application and let it execute scripts. These scripts can be user entered or maybe loaded from a file or socket.
 
 The earliest I remember seeing something like this was in the JMS monitoring tool Hermes JMS. We used that to monitor and manage our TIBCO JMS servers and this provided a small embedded Jython console that let us interact with the application. I probably saw another application in one of old companies using something like this add interactivity and evalute user entered expressions. But that's it - nothing major.
 <h3>How will we use this to make applications more easy to re-use?</h3>
@@ -26,8 +26,8 @@ Before we get into how, lets spend some time revising some of the enterprise Jav
 	<li>Get some data, parse and translate it</li>
 	<li>Push it to the target system.</li>
 </ul>
-<div>There are only n number of source system types and another m number of target system types. If you account for common interface and <a class="zem_slink" title="Application programming interface" href="http://en.wikipedia.org/wiki/Application_programming_interface" rel="wikipedia">API's</a> then these are small numbers and there can be only so many combinations between these. I have almost always had the situation where I use the same type of source connectivity to the application and to the target messaging layer and push data on to the queues or topics. In each case, what differs is the data processing.</div>
-<div>So my Java project ends up with about 10 classes for the common connectivity and one class for each type of these transformations. After becoming a Spring convert, I now have a set of spring configuration files and a <a class="zem_slink" title="Common Interface" href="http://en.wikipedia.org/wiki/Common_Interface" rel="wikipedia">common Interface</a> for all the classes that deal with my data processing.</div>
+<div>There are only n number of source system types and another m number of target system types. If you account for common interface and <a  title="Application programming interface" href="http://en.wikipedia.org/wiki/Application_programming_interface" rel="wikipedia">API's</a> then these are small numbers and there can be only so many combinations between these. I have almost always had the situation where I use the same type of source connectivity to the application and to the target messaging layer and push data on to the queues or topics. In each case, what differs is the data processing.</div>
+<div>So my Java project ends up with about 10 classes for the common connectivity and one class for each type of these transformations. After becoming a Spring convert, I now have a set of spring configuration files and a <a  title="Common Interface" href="http://en.wikipedia.org/wiki/Common_Interface" rel="wikipedia">common Interface</a> for all the classes that deal with my data processing.</div>
 <div>If you think about it, there is only one part that varies. Each time a new application gets added, I write another class, rebuild the jar and configurations and restart the thing. Done.</div>
 <h3>Thinking again with a more clear mind</h3>
 <div>So what I do each time is</div>
@@ -41,14 +41,14 @@ Before we get into how, lets spend some time revising some of the enterprise Jav
 </div>
 <h3>So how do we bite the bullet?</h3>
 &nbsp;
-<div>Take a look at the code listing at the end of this blog - its a large blurb of code but I felt it made more sense to embed it rather than link to a source control. This code shows a class called Scriptable which creates  a <a class="zem_slink" title="Scripting language" href="http://en.wikipedia.org/wiki/Scripting_language" rel="wikipedia">Script</a> engine, default Jython (Java Python), and executes code sent to it using binding variables if any. This class is written and battle tested to do one thing and do it well - take a piece of code written in a scripting language and run it. As long as the script is tested, no problems. But if the script fails or has errors - no problem, just report the error. This kind of code is easy to write and test and will not fail.</div>
+<div>Take a look at the code listing at the end of this blog - its a large blurb of code but I felt it made more sense to embed it rather than link to a source control. This code shows a class called Scriptable which creates  a <a  title="Scripting language" href="http://en.wikipedia.org/wiki/Scripting_language" rel="wikipedia">Script</a> engine, default Jython (Java Python), and executes code sent to it using binding variables if any. This class is written and battle tested to do one thing and do it well - take a piece of code written in a scripting language and run it. As long as the script is tested, no problems. But if the script fails or has errors - no problem, just report the error. This kind of code is easy to write and test and will not fail.</div>
 <div>The magic lies in how you use it. Lets take one deployment scenario and walk through it.</div>
 <div>
 <ul>
 	<li>Your assignment is to connect to a database and execute a query on some data and publish that to your messaging layer.</li>
 	<li>In future, you will connect to this database again and again and will run more queries and publish the data.</li>
 	<li>Because the data is different and to help performance, each of these queries will be run as  a different batch or polling application.</li>
-	<li>It will be the same type of database - Sybase, <a class="zem_slink" title="MySQL" href="http://www.mysql.com" rel="homepage">MySQL</a> etc and same messaging layer</li>
+	<li>It will be the same type of database - Sybase, <a  title="MySQL" href="http://www.mysql.com" rel="homepage">MySQL</a> etc and same messaging layer</li>
 </ul>
 <div>And this is how we solve it using our class given below.</div>
 <div>
@@ -56,10 +56,10 @@ Before we get into how, lets spend some time revising some of the enterprise Jav
 	<li>Write the database connectivity and the messaging connectivity code</li>
 	<li>When integrating these two, create an instance of the Scriptable class and pass it two binding variables - database connection and messaging connection.</li>
 	<li>Write a small script in Python or Groovy or whatever you prefer and in that script write the logic to execute the query and process results.</li>
-	<li>You might as well <a class="zem_slink" title="Hard coding" href="http://en.wikipedia.org/wiki/Hard_coding" rel="wikipedia">hard code</a> the query in there.</li>
+	<li>You might as well <a  title="Hard coding" href="http://en.wikipedia.org/wiki/Hard_coding" rel="wikipedia">hard code</a> the query in there.</li>
 	<li>You can pull and push data using the connection variables.</li>
 	<li>Write the main code in such a way that it takes the script from somewhere and passes to the engine with the two connection variables.</li>
-	<li>When creating the application configuration in <a class="zem_slink" title="XML" href="http://en.wikipedia.org/wiki/XML" rel="wikipedia">XML</a>, put this script in the XML and have the application load it and execute it.</li>
+	<li>When creating the application configuration in <a  title="XML" href="http://en.wikipedia.org/wiki/XML" rel="wikipedia">XML</a>, put this script in the XML and have the application load it and execute it.</li>
 	<li>If not using XML config, put the script in a file and pass it as a parameter - whatever suits your deployment.</li>
 	<li>When the application is run, it will take the script and do the magic.</li>
 	<li>All this takes about a day or two to test thoroughly.</li>

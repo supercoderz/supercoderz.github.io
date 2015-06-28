@@ -6,11 +6,11 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="240" caption="Unit Test (Photo credit: Paul Watson)"]<a href="http://www.flickr.com/photos/51035609331@N01/43393028" target="_blank"><img class="zemanta-img-inserted zemanta-img-configured" title="Unit Test" src="http://farm1.static.flickr.com/32/43393028_960dd71a0b_m.jpg" alt="Unit Test" width="240" height="159" /></a>[/caption]
+[caption id="" align="alignright" width="240" caption="Unit Test (Photo credit: Paul Watson)"]<a href="http://www.flickr.com/photos/51035609331@N01/43393028" target="_blank"><img  title="Unit Test" src="http://farm1.static.flickr.com/32/43393028_960dd71a0b_m.jpg" alt="Unit Test" width="240" height="159" /></a>[/caption]
 
 If you tell me about unit tests and the importance of having those to build a good application, my emotions swing between two extremes - one where I fantasize about having the perfectly unit tested software, and two where I want to vent my frustration on those tests being broken - everything in between rarely crosses my mind.
 
-The fantasy is best described by this article about <a class="zem_slink" title="Google" href="http://google.com" rel="homepage" target="_blank">Google</a> fixing a Chrome security flaw in less than 24 hours - <a href="http://arstechnica.com/business/news/2012/03/after-the-pwnage-critical-google-chrome-hole-plugged-in-24-hours.ars">http://arstechnica.com/business/news/2012/03/after-the-pwnage-critical-google-chrome-hole-plugged-in-24-hours.ars</a>
+The fantasy is best described by this article about <a  title="Google" href="http://google.com" rel="homepage" target="_blank">Google</a> fixing a Chrome security flaw in less than 24 hours - <a href="http://arstechnica.com/business/news/2012/03/after-the-pwnage-critical-google-chrome-hole-plugged-in-24-hours.ars">http://arstechnica.com/business/news/2012/03/after-the-pwnage-critical-google-chrome-hole-plugged-in-24-hours.ars</a>
 
 The other extreme is best described by this Hitler meme video -
 
@@ -22,7 +22,7 @@ So, why do I get such extreme emotions? And is it so difficult to get unit tests
 <h3>A few words about the Google fix in 24 hours</h3>
 I am amazed, but I know it is because of discipline and is not magic.
 
-This is all I will say. <a class="zem_slink" title="Google Chrome" href="http://www.google.com/chrome" rel="homepage" target="_blank">Google Chrome</a> is definitely not  a trivial piece of software that does a simple task, and given that the issue fixed was a <a class="zem_slink" title="Zero-day attack" href="http://en.wikipedia.org/wiki/Zero-day_attack" rel="wikipedia" target="_blank">zero day exploit</a> in the core of the application, the fix isn't trivial either. But they did it - folks at Google are pretty awesome and definitely way above my level.
+This is all I will say. <a  title="Google Chrome" href="http://www.google.com/chrome" rel="homepage" target="_blank">Google Chrome</a> is definitely not  a trivial piece of software that does a simple task, and given that the issue fixed was a <a  title="Zero-day attack" href="http://en.wikipedia.org/wiki/Zero-day_attack" rel="wikipedia" target="_blank">zero day exploit</a> in the core of the application, the fix isn't trivial either. But they did it - folks at Google are pretty awesome and definitely way above my level.
 
 But if you think about how they might have done this, and applying some basic knowledge that most of us have about software development and testing, we can say the following things about this feat -
 <ul>
@@ -33,7 +33,7 @@ But if you think about how they might have done this, and applying some basic kn
 </ul>
 The rest of this blog post will be devoted to diving deep into points 1 and 2 raised above.
 <h3>Defining unit testing</h3>
-<a class="zem_slink" title="Unit testing" href="http://en.wikipedia.org/wiki/Unit_testing" rel="wikipedia" target="_blank">Unit testing</a> is the process of testing a single unit of code - this can be a line, a method, a class or an application depending on what your are building and what your building blocks are and what you are dealing with. I build messaging applications and <a class="zem_slink" title="Service-oriented architecture" href="http://en.wikipedia.org/wiki/Service-oriented_architecture" rel="wikipedia" target="_blank">SOA</a> applications for  a living, so unit testing for me is testing my individual adaptor or service until I am satisfied with the functionality.  If ever i end up in case where more than one of us is building different parts of the same application then unit testing will become testing the single method or function or class that one of us is building.
+<a  title="Unit testing" href="http://en.wikipedia.org/wiki/Unit_testing" rel="wikipedia" target="_blank">Unit testing</a> is the process of testing a single unit of code - this can be a line, a method, a class or an application depending on what your are building and what your building blocks are and what you are dealing with. I build messaging applications and <a  title="Service-oriented architecture" href="http://en.wikipedia.org/wiki/Service-oriented_architecture" rel="wikipedia" target="_blank">SOA</a> applications for  a living, so unit testing for me is testing my individual adaptor or service until I am satisfied with the functionality.  If ever i end up in case where more than one of us is building different parts of the same application then unit testing will become testing the single method or function or class that one of us is building.
 
 Whichever level of abstraction I choose to look at, I will always be testing a single unit of code - one that takes some input and gives an output, and this output is same no matter how many times I give that input. Or if the state is manipulated by this input, then for every call with this input, I should get an output which is a logical next step from the previous iteration.
 
@@ -42,7 +42,7 @@ Very easy to do.
 There are different answers depending on who you ask - someone will say it is a file with code in that, someone will say it is a class, a method or a variable. Some even call an interface a unit or sometimes even a running process.
 
 But since we are talking about automated unit tests, our unit of code is a method - a method that takes an input and returns a value as an output. It could return nothing as an output or even throw an error.
-<h3>OK, so we know that we need to <a class="zem_slink" title="Test method" href="http://en.wikipedia.org/wiki/Test_method" rel="wikipedia" target="_blank">test methods</a> - is it enough to just send a few inputs and check results?</h3>
+<h3>OK, so we know that we need to <a  title="Test method" href="http://en.wikipedia.org/wiki/Test_method" rel="wikipedia" target="_blank">test methods</a> - is it enough to just send a few inputs and check results?</h3>
 Not really.
 
 If you think from a procedural paradigm like C, each method performs some logic on the inputs to return a value. It might alter some global variables.
@@ -57,9 +57,9 @@ In case of error or exceptions, there can be one or many errors thrown depending
 
 So as you can see there are a number of valid input output cases, errors and exceptions, invalid inputs and also cases where you need to test that the method handled invalid or incorrect inputs gracefully and reported back the issues.
 
-Quite a handful of cases and all these need to be verified by confirming that the proper value was returned or the proper <a class="zem_slink" title="Global variable" href="http://en.wikipedia.org/wiki/Global_variable" rel="wikipedia" target="_blank">global variable</a> or state was updated.
+Quite a handful of cases and all these need to be verified by confirming that the proper value was returned or the proper <a  title="Global variable" href="http://en.wikipedia.org/wiki/Global_variable" rel="wikipedia" target="_blank">global variable</a> or state was updated.
 <h3>Writing code to effectively test and verify all paths of execution</h3>
-I once met someone who had a rule that no method should be more than 15 lines - that was because he configured his <a class="zem_slink" title="Integrated development environment" href="http://en.wikipedia.org/wiki/Integrated_development_environment" rel="wikipedia" target="_blank">IDE</a> to show 20 lines in the <a class="zem_slink" title="Source code editor" href="http://en.wikipedia.org/wiki/Source_code_editor" rel="wikipedia" target="_blank">code editor</a> and that was effectively what he could concentrate on at once glance without having to scroll around. And he always had many small methods. It helped him focus and isolate code. If he ever felt that two methods needed to call the same third method and there was something wrong with it like <a class="zem_slink" title="Duplicate code" href="http://en.wikipedia.org/wiki/Duplicate_code" rel="wikipedia" target="_blank">code duplication</a> etc, then he would redesign his methods. Of course he applied common sense where it was impossible to break into such small methods.
+I once met someone who had a rule that no method should be more than 15 lines - that was because he configured his <a  title="Integrated development environment" href="http://en.wikipedia.org/wiki/Integrated_development_environment" rel="wikipedia" target="_blank">IDE</a> to show 20 lines in the <a  title="Source code editor" href="http://en.wikipedia.org/wiki/Source_code_editor" rel="wikipedia" target="_blank">code editor</a> and that was effectively what he could concentrate on at once glance without having to scroll around. And he always had many small methods. It helped him focus and isolate code. If he ever felt that two methods needed to call the same third method and there was something wrong with it like <a  title="Duplicate code" href="http://en.wikipedia.org/wiki/Duplicate_code" rel="wikipedia" target="_blank">code duplication</a> etc, then he would redesign his methods. Of course he applied common sense where it was impossible to break into such small methods.
 
 What I am getting at here is that it is very easy to test small methods. They take some inputs and provide only a small number of results. A method with a long if else ladder can provide tens of results and quickly become difficult to verify for all possible comments. Instead if that method just delegated to large number of small methods, then testing each of these small methods is equivalent to testing the whole if else ladder.
 

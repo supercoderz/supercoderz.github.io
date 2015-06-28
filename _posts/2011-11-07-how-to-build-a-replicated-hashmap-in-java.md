@@ -6,15 +6,15 @@ comments: false
 categories:
 ---
 
-We all have heard about clustered <a class="zem_slink" title="Application server" href="http://en.wikipedia.org/wiki/Application_server" rel="wikipedia">application servers</a> and databases and how they can replicate data between instances. We have heard about distributed cache implementations like <a class="zem_slink" title="EHcache" href="http://ehcache.org/" rel="homepage">Ehcache</a>, Hazelcast etc and even NOSQL databases like <a class="zem_slink" title="MongoDB" href="http://www.mongodb.org/" rel="homepage">MongoDB</a> that replicate data between all the instances. They do a great job of replicating data efficiently and ensuring <a class="zem_slink" title="Data integrity" href="http://en.wikipedia.org/wiki/Data_integrity" rel="wikipedia">data integrity</a>. They provide different guarantees on <a class="zem_slink" title="data replication" href="http://www.symantec.com/business/volume-replicator" rel="symantec">data replication</a> and availability.
+We all have heard about clustered <a  title="Application server" href="http://en.wikipedia.org/wiki/Application_server" rel="wikipedia">application servers</a> and databases and how they can replicate data between instances. We have heard about distributed cache implementations like <a  title="EHcache" href="http://ehcache.org/" rel="homepage">Ehcache</a>, Hazelcast etc and even NOSQL databases like <a  title="MongoDB" href="http://www.mongodb.org/" rel="homepage">MongoDB</a> that replicate data between all the instances. They do a great job of replicating data efficiently and ensuring <a  title="Data integrity" href="http://en.wikipedia.org/wiki/Data_integrity" rel="wikipedia">data integrity</a>. They provide different guarantees on <a  title="data replication" href="http://www.symantec.com/business/volume-replicator" rel="symantec">data replication</a> and availability.
 
 Is it all black magic that is too hard to comprehend? No - its just simple logic built into the entities that store the data.
 
-In this post I will describe how you can build a simple replicating <a class="zem_slink" title="Hash table" href="http://en.wikipedia.org/wiki/Hash_table" rel="wikipedia">HashMap</a> in Java. I will build this replication using few lines of code in Netty - the easy to use NIO library from <a class="zem_slink" title="JBoss application server" href="http://www.jboss.com/products/platforms/application/" rel="homepage">JBoss</a>.
+In this post I will describe how you can build a simple replicating <a  title="Hash table" href="http://en.wikipedia.org/wiki/Hash_table" rel="wikipedia">HashMap</a> in Java. I will build this replication using few lines of code in Netty - the easy to use NIO library from <a  title="JBoss application server" href="http://www.jboss.com/products/platforms/application/" rel="homepage">JBoss</a>.
 <h3><!--more-->So what do we want to do?</h3>
 We want to build a replicating HashMap - as in we create an instance of the map, add data to it and the data is magically transported across the ether to another HashMap running in a different JVM!
 <h3>Wow! What high end tools do we need for this?</h3>
-We don't need much - just the usual Java and Netty NIO framework. We will use basic Java ConcurrentHashMap and HashMap classes for data storage and Netty to build the back end communication. We could have built the back end communication in any manner - <a class="zem_slink" title="Java Management Extensions" href="http://en.wikipedia.org/wiki/Java_Management_Extensions" rel="wikipedia">JMX</a>, Database or sockets. Netty provides an easy to use approach to build this using plain old sockets.
+We don't need much - just the usual Java and Netty NIO framework. We will use basic Java ConcurrentHashMap and HashMap classes for data storage and Netty to build the back end communication. We could have built the back end communication in any manner - <a  title="Java Management Extensions" href="http://en.wikipedia.org/wiki/Java_Management_Extensions" rel="wikipedia">JMX</a>, Database or sockets. Netty provides an easy to use approach to build this using plain old sockets.
 <h3><strong>The design aspects</strong></h3>
 For the purpose of this example, we will replicate add and delete operations. In order to represent the operation being performed on the map we will need an entity. Lets call that Event. This has to be serializable because it has to be sent over the socket. This will have 3 fields - the operation, they key and the value of the entry.
 
@@ -53,7 +53,7 @@ import com.supercoderz.data.DataCache;
 
 public class ServerHandler extends SimpleChannelUpstreamHandler {
 
-	<a class="zem_slink" title="Annotation" href="http://en.wikipedia.org/wiki/Annotation" rel="wikipedia">@Override</a>
+	<a  title="Annotation" href="http://en.wikipedia.org/wiki/Annotation" rel="wikipedia">@Override</a>
 	public void messageReceived(ChannelHandlerContext ctx, MessageEvent e)
 			throws Exception {
 		Object o=e.getMessage();
