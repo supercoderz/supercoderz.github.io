@@ -6,7 +6,7 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:The-amqp-model-for-wikipedia.svg" target="_blank"><img  title="AMQP Model" alt="AMQP Model" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The-amqp-model-for-wikipedia.svg/300px-The-amqp-model-for-wikipedia.svg.png" height="225" width="300" /></a> AMQP Model (Photo credit: Wikipedia)[/caption]
+
 
 A few weeks back when I was looking at how I could build a synchronous task execution system for a Django app, I came across Celery, and then I found something called Kombu (<a href="http://kombu.readthedocs.org/en/latest/">http://kombu.readthedocs.org/en/latest/</a>), which was a message passing framework for Celery.
 
@@ -18,7 +18,7 @@ I then saw that Kombu had something called Virtual transports which let it use t
 
 This post is an attempt to explain how a messaging server works and how these virtual backends are built, and how they can make it easy for us by not needing us to manage message storage etc.
 
-<!--more-->
+
 <h2>How does a message broker work?</h2>
 A message broker like ActiveMQ or a commercial one like TIBCO EMS, are nothing but a server process that accepts connections from clients and sends or receives messages. These brokers implement one of the many messaging protocols like JMS and provide either publish subscribe or queue based message passing or both. They even support durable or stored messages. In order to so this, a message broker needs to
 <ol>

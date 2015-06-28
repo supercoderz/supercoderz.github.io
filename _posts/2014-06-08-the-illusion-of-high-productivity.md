@@ -9,7 +9,7 @@ categories:
 Nowadays the emphasis seems to be on developer productivity - you have the tools and libraries that have been built by people who know how to do it right, these are open source, and there is a community to help you out. Or there is a large corpus of previous projects in the company that you can simply reuse and save lot of work.All you need to do is get the libraries, follow the examples and you should be good to go! You should be able to build castles out of thin air!
 
 But that never really happens. Why?
-<h2><!--more--></h2>
+<h2></h2>
 <h2>Just a decade ago</h2>
 I said that productivity doesn't happen at the level that we expect it to happen, but that doesn't mean that it doesn't happen at all.
 

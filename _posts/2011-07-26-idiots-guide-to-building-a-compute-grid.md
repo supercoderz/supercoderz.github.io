@@ -8,7 +8,7 @@ categories:
 
 <div >
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Rack001.jpg"><img title="A typical server &quot;rack&quot;, commonly se..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Rack001.jpg/300px-Rack001.jpg" alt="A typical server &quot;rack&quot;, commonly se..." width="300" height="400" /></a>[/caption]
+
 
 </div>
 We all have heard about <a  title="Grid computing" href="http://en.wikipedia.org/wiki/Grid_computing" rel="wikipedia">grid computing</a>. If you have a computer science degree, then you probably have had a paper on this subject and maybe built or worked on a grid in your college. Grid computing can be simply defined as distributing a large <a  title="Task (computing)" href="http://en.wikipedia.org/wiki/Task_%28computing%29" rel="wikipedia">task</a> over a large number of computers so that they can all execute the task <a  title="Series and parallel circuits" href="http://en.wikipedia.org/wiki/Series_and_parallel_circuits" rel="wikipedia">in parallel</a> and we get the result quickly.  And we all know that grids are complicated - you have to create a task, you have to submit it to a master <a  title="Server (computing)" href="http://en.wikipedia.org/wiki/Server_%28computing%29" rel="wikipedia">server</a> that sends it to one of the many workers, it collects the results, checks for failures, automatically executes failed jobs, puts all required resources in shared locations, provides a monitoring console etc etc etc. In short, its not simple. It can be built by guru's and we use it.
@@ -16,7 +16,7 @@ We all have heard about <a  title="Grid computing" href="http://en.wikipedia.org
 From the point of view of a non computer science guy, this picture seems pretty reasonable to me. But is it really the case?
 
 The only way to prove this to myself was to try it - and the following long blog post describes exactly what I did. By the end of this I will show you a simple grid that works and does a task in parallel. Read on to find out more.
-<h3><!--more-->Basic components of the grid</h3>
+<h3>Basic components of the grid</h3>
 Before we begin, lets outline the key basics of a grid that we can read from any of the many books on this topic:
 <ul>
 	<li>The workers on the grid each execute a small and definite task that does not depend on other tasks and can be completed by itself</li>
@@ -122,7 +122,7 @@ In order to expose the method, we will register it in the XML RPC server and sta
 
 If you start this code in a terminal, you will see something like this
 
-[caption id="attachment_97" align="aligncenter" width="300" caption="Server running"]<a href="http://supercoderz.files.wordpress.com/2011/07/screenshot-harihari-laptop-grid-terminal.png"><img class="size-medium wp-image-97" title="Screenshot-hari@hari-laptop: ~-grid - Terminal" src="http://supercoderz.files.wordpress.com/2011/07/screenshot-harihari-laptop-grid-terminal.png?w=300" alt="Server running" width="300" height="176" /></a>[/caption]
+
 <h3>Building the client</h3>
 The client will be a simple XML RPC client. A very simple client can be built as follows - the code serializes the fibonacci method, and invokes the method over the XML RPC proxy.
 <pre style="padding-left:30px;">import xmlrpclib,base64,types,marshal
@@ -134,9 +134,9 @@ code_string=base64.b64encode(marshal.dumps(fibonaaci.func_code))
 print proxy.execute(code_string,20)</pre>
 The code doesn't do much - if you start the server in one terminal and run this in another terminal, you will see a log in the server window when the request is received and processed, and you will see the result printed in the client window.
 
-[caption id="attachment_98" align="aligncenter" width="300" caption="Client with result printed"]<a href="http://supercoderz.files.wordpress.com/2011/07/screenshot-harihari-laptop-grid-terminal-1.png"><img class="size-medium wp-image-98" title="Screenshot-hari@hari-laptop: ~-grid - Terminal-1" src="http://supercoderz.files.wordpress.com/2011/07/screenshot-harihari-laptop-grid-terminal-1.png?w=300" alt="Client with result printed" width="300" height="176" /></a>[/caption]
 
-[caption id="attachment_99" align="aligncenter" width="300" caption="Server side log of task completion"]<a href="http://supercoderz.files.wordpress.com/2011/07/screenshot-harihari-laptop-grid-terminal-2.png"><img class="size-medium wp-image-99" title="Screenshot-hari@hari-laptop: ~-grid - Terminal-2" src="http://supercoderz.files.wordpress.com/2011/07/screenshot-harihari-laptop-grid-terminal-2.png?w=300" alt="Server side log of task completion" width="300" height="176" /></a>[/caption]
+
+
 
 Now, this was no grid - one server received task from one client. To make this more interesting,lets start another server and modify the client to send multiple requests to the server in threads. This is how the client code looks.
 <pre style="padding-left:30px;">import xmlrpclib,base64,types,marshal

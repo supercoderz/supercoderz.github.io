@@ -6,14 +6,15 @@ comments: false
 categories:
 ---
 
-<div class="mceTemp"><a href="http://www.flickr.com/photos/26672996@N07/4861146813"><img  title="MapReduce" src="http://farm5.static.flickr.com/4119/4861146813_c915e6639e_m.jpg" alt="MapReduce" /></a></div>
 Most of us have heard about <a  title="MapReduce" href="http://en.wikipedia.org/wiki/MapReduce" rel="wikipedia">MapReduce</a> - the <a  title="Google" href="http://google.com" rel="homepage">Google</a> framework for solving problems in parallel - which is based on their <a  title="BigTable" href="http://en.wikipedia.org/wiki/BigTable" rel="wikipedia">BigTable</a> and <a  title="Hadoop" href="http://hadoop.apache.org/" rel="homepage">Hadoop</a> which is an open source implementation of MapReduce. These are tools that are used by Google and Yahoo and many other companies to build scalable websites and all that. All these need many nodes to be setup and work load distributed across these nodes to get the results that we want.
+
+<div class="mceTemp"><a href="http://www.flickr.com/photos/26672996@N07/4861146813"><img  title="MapReduce" src="http://farm5.static.flickr.com/4119/4861146813_c915e6639e_m.jpg" alt="MapReduce" /></a></div>
 
 But in everyday life we hardly ever solve problems of this scale - and we don't need or cannot afford to pay for so many hundreds of nodes for our work. Not with the current cost cutting. Does that mean we cannot use these cool tools? No we can,  map and reduce are paradigms borrowed from <a  title="Functional programming" href="http://en.wikipedia.org/wiki/Functional_programming" rel="wikipedia">Functional Programming</a> which Google built into a very efficient state. We can use any language, like <a  title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a>, that supports map and reduce and achieve the same kind of parallel processing - albeit on a single server spread across all the cores.
 
 So how can we do it? Where is it not possible to use this?
 
-<!--more-->
+
 <h2>A bit of a background</h2>
 This blog post by Joel Spolsky from way back in 2006 is a very good explanation of map and reduce fundamentals -
 

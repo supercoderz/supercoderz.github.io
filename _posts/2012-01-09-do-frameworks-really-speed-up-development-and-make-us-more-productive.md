@@ -12,7 +12,7 @@ But having a library does not solve all problems - there is another level of abs
 
 All these are supposed to make our jobs easier, speed up development, make us more productive and in general cause less bugs because they are proven libraries. But do they really speed us up and cause less bugs? If not then why? What are the things that we should consider to get best results?
 
-<!--more-->
+
 <h2>What problems do frameworks solve?</h2>
 Frameworks usually solve the high level problems like
 <ul>

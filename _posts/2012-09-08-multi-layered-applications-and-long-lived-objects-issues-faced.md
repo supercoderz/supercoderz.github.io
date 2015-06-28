@@ -10,7 +10,7 @@ On my day job I build applications that need to get data in and out fast to the 
 
 This works and works fine for most throughput scenarios, but once in a while it fails. Why does this fail? Is it a problem with the layers? Is it external? Is it the way each layer behaves? Lets find out.
 
-<!--more-->
+
 <h2>Objects and references</h2>
 We know that objects are passed around by reference. So lets say a piece of code calls a method with an object, then the <a  title="Object (computer science)" href="http://en.wikipedia.org/wiki/Object_%28computer_science%29" rel="wikipedia" target="_blank">object reference</a> is passed to that method so that it can manipulate it as it feels fit. If that method in turn calls other methods and passes this object, then it again sends a reference and this goes on until the object has been passed n levels deep and the logic is completed.
 

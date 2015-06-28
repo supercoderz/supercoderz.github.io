@@ -10,7 +10,7 @@ Every so often, I hear someone saying or writing about how a particular <a  titl
 
 Don't get me wrong here, I am all for building the correct solution that lasts, but there are so many other considerations that ruin your day, and you have to make a <a  title="Compromise" href="http://en.wikipedia.org/wiki/Compromise" rel="wikipedia" target="_blank">compromise</a>. These compromises eventually lead to your solution being replaced with a better one.This post is an attempt to list and understand some of these limitations that cause us to build a not so right or a compromise design for any application - and which eventually kill your solution.
 
-<!--more-->
+
 <h2>The ideal world which isn't</h2>
 The hypothetical ideal world which we all would like to believe we live in and which we try to emulate is where we use the right tool that fits the problem and then solve the problem using that with the best design.
 

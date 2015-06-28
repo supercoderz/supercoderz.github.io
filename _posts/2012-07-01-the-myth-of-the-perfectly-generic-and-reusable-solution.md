@@ -6,13 +6,13 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:SOA_Elements.png" target="_blank"><img  title="English: Elements of a Service Oriented Archit..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/SOA_Elements.png/300px-SOA_Elements.png" alt="English: Elements of a Service Oriented Archit..." width="300" height="197" /></a> English: Elements of a Service Oriented Architecture Polski: Elementy architektury zorientowanej usługowo Українська: Елементи Сервісно-орієнтованої архітектури (Photo credit: Wikipedia)[/caption]
-
 Often times when I set out to do something new on the job, I hear a simple requirement over and above the actual business function - keep it generic enough that it can be reused. And I set about it to achieve the mythical generic solution that can be reused again and again for a variety of similar <a  title="Use case" href="http://en.wikipedia.org/wiki/Use_case" rel="wikipedia" target="_blank">use cases</a>. Do I succeed? Depends on how you define success. Given that my hands are tied because of an existing platform and the solution has to fit in this rather than be a rouge process, I make compromises and we end up with something that sort of looks much better than hard coding but also cannot be directly reused without making small changes. The closest I got is making a component that can take Javascript functions in configuration and I can use these scripts to tweak behavior as I see fit.
+
+<a href="http://commons.wikipedia.org/wiki/File:SOA_Elements.png" target="_blank"><img  title="English: Elements of a Service Oriented Archit..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/SOA_Elements.png/300px-SOA_Elements.png" alt="English: Elements of a Service Oriented Archit..." width="300" height="197" /></a> English: Elements of a Service Oriented Architecture Polski: Elementy architektury zorientowanej usługowo Українська: Елементи Сервісно-орієнтованої архітектури (Photo credit: Wikipedia)
 
 This makes me think - is it even possible to achieve a perfectly generic solution that fits every need that has a similar use case?
 
-<!--more-->
+
 <h2>It obviously depends on the use case</h2>
 It is kind of obvious that if the use case is not generic enough and cannot be applied to a different set of inputs without any change, then the solution cannot be generic. If you are building something that solves a <a  title="Business process" href="http://en.wikipedia.org/wiki/Business_process" rel="wikipedia" target="_blank">business process</a> which is very unique to your company for whatever legacy reasons and is not an industry standard, then there is no reason to believe that you can find an off the shelf generic solution for that. Similarly if the process was specific to your line of business then there is no reason to believe that it will be used by someone else in the same company. These are cases where trying to build something generic will only kill time.
 

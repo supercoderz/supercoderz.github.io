@@ -6,13 +6,13 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:HTTP_pipelining.svg" target="_blank"><img  title="English: HTTP pipelining, client-server connec..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/HTTP_pipelining.svg/300px-HTTP_pipelining.svg.png" alt="English: HTTP pipelining, client-server connec..." width="300" height="187" /></a> English: HTTP pipelining, client-server connection schema (Photo credit: Wikipedia)[/caption]
-
 Have you ever been in a situation where a connection to a resource was lost and your application either did not tell you about it, or did not try to reconnect or ends up in a mess trying to reconnect? How does that feel? You might have wondered that it would be great to have something that can automatically recover so that you don't need to intervene, or even avoid any manual recovery work that comes after a restart to recover from these issues.
+
+<a href="http://commons.wikipedia.org/wiki/File:HTTP_pipelining.svg" target="_blank"><img  title="English: HTTP pipelining, client-server connec..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/HTTP_pipelining.svg/300px-HTTP_pipelining.svg.png" alt="English: HTTP pipelining, client-server connec..." width="300" height="187" /></a> English: HTTP pipelining, client-server connection schema (Photo credit: Wikipedia)
 
 This is a fairly common issue and it can be fixed - but to fix it you need to consider the exact scenario where it is happening and any specific requirements specific to your application or a resource. This post is an attempt to understand all these considerations.
 
-<!--more-->
+
 <h2>So when do you lose a connection?</h2>
 For the sake of this post, we will consider connections to network resources - things like <a  title="Database" href="http://en.wikipedia.org/wiki/Database" rel="wikipedia" target="_blank">databases</a>, web servers, message queues, <a  title="Secure Shell" href="http://en.wikipedia.org/wiki/Secure_Shell" rel="wikipedia" target="_blank">SSH</a> connections etc. It doesn't matter which one of these it is because at the core of it it is a connection over a socket using some form of the TCP/IP protocol. <a  title="User Datagram Protocol" href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" rel="wikipedia" target="_blank">UDP</a> is connection less so doesn't really matter here.
 

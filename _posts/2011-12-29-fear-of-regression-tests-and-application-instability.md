@@ -6,15 +6,15 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://en.wikipedia.org/wiki/File:Guitest.jpg"><img  title="Guitest" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/42/Guitest.jpg/300px-Guitest.jpg" alt="Guitest" width="300" height="144" /></a>[/caption]
-
 We all have heard about or experienced first hand some situations where an application owner comes back saying that a seemingly small change will take an obscenely long time because it would impact the other components and regression testing will take time. In these cases generally you will also see someone from you team or above you start a long winding discussion on why you should have test packs and <a  title="Unit testing" href="http://en.wikipedia.org/wiki/Unit_testing" rel="wikipedia">unit tests</a> so that you can automatically <a  title="Regression testing" href="http://en.wikipedia.org/wiki/Regression_testing" rel="wikipedia">regression test</a> the whole thing and making a change takes only a very very unbelievable short time. Am sure that sounded familiar - whichever side you were on or not on.
+
+<a href="http://en.wikipedia.org/wiki/File:Guitest.jpg"><img  title="Guitest" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/42/Guitest.jpg/300px-Guitest.jpg" alt="Guitest" width="300" height="144" /></a>
 
 In a way if we think about it both sides make a valid point - to quote from <a  title="Fight Club" href="http://www.rottentomatoes.com/m/fight_club" rel="rottentomatoes">Fight Club</a>, on a long enough time scale the survival rate of anything drops down to zero. You new application with all the shiny features and a shiny regression test pack will not be shiny after it has spent a few months or years out in the open with users asking for  ad hoc changes.
 
 You will ultimately end up in a situation where you will dread making changes. Just why do we get into such a scenario?
 
-<!--more-->
+
 <h3>Applications evolve, and age like vinegar</h3>
 When you build a new application from scratch, you know exactly what the application has to do, how it has to be done and what it should look like. Hours will be spent in meeting rooms discussing every minor detail, things will be tested documented and proven to work as expected. Since it is a new project there will be zeal and time and patience to get the right  thing done, and using all the latest paradigms it is possible and fairly common place to have a regression test pack in place which will be run by the <a  title="Quality assurance" href="http://en.wikipedia.org/wiki/Quality_assurance" rel="wikipedia">QA</a> team or whatever they are called.
 

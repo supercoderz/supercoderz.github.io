@@ -10,7 +10,7 @@ The title of this post is pretty simple, but the word itself is pretty complicat
 
 In this post I will discuss my thoughts about this complex and important aspect of work called Leadership.
 
-<!--more-->
+
 <h3><strong>Some material</strong></h3>
 The following <a  title="Three Links" href="http://en.wikipedia.org/wiki/Three_Links" rel="wikipedia">three links</a> to posts by <a  title="Joel Spolsky" href="http://joel.spolsky.com" rel="homepage">Joel Spolsky</a> are something that I wish I had come across earlier - they verbalize some of my thoughts very effectively.
 <p style="padding-left:30px;"><a href="http://www.joelonsoftware.com/items/2006/08/07.html">http://www.joelonsoftware.com/items/2006/08/07.html</a></p>
@@ -19,9 +19,10 @@ The following <a  title="Three Links" href="http://en.wikipedia.org/wiki/Three_L
 <p style="padding-left:30px;"><a href="http://www.joelonsoftware.com/items/2006/08/10.html">http://www.joelonsoftware.com/items/2006/08/10.html</a></p>
 I am a great believer of the fact that the <a  title="Ramayana" href="http://en.wikipedia.org/wiki/Ramayana" rel="wikipedia">Ramayana</a>, <a  title="Mahabharata" href="http://en.wikipedia.org/wiki/Mahabharata" rel="wikipedia">Mahabharata</a> and all those <a  title="History of India" href="http://en.wikipedia.org/wiki/History_of_India" rel="wikipedia">ancient Indian</a> texts that tell tales of dharma do have an application even in this day and age. The following two videos explain two things from this which really mean something to me - the relation between rules and principles, and leadership.
 
-[youtube http://www.youtube.com/watch?v=aqpa1ku4tnU&w=420&h=315]
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=aqpa1ku4tnU&w=420&h=315" frameborder="0" allowfullscreen></iframe>
 
-[youtube http://www.youtube.com/watch?v=H0vWCLKqkYQ&w=420&h=315]
+<iframe width="420" height="315" src="https://www.youtube.com/watch?v=H0vWCLKqkYQ&w=420&h=315" frameborder="0" allowfullscreen></iframe>
+
 <h3>So what should a leader be like?</h3>
 A leader should be
 <ul>

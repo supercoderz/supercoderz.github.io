@@ -14,7 +14,7 @@ But, it never really happens that way and you end up slogging to scale your appl
 
 But there are people who manage to do this scalability voodoo without much hassle - how do they do it?
 
-<!--more-->
+
 <h2>Do the simplest possible thing, not!</h2>
 I read somewhere in a presentation about writing <a  title="Beautiful Code" href="http://oreilly.com/catalog/9780596510046/" rel="homepage" target="_blank">beautiful code</a> that one should write the simplest possible code without getting into elaborate architectures and designs. The author said that elaborate architectures, otherwise known as enterprise, can complicate your code or application.
 

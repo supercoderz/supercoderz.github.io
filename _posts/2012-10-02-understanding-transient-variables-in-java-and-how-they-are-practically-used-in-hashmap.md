@@ -10,7 +10,7 @@ What is the significance of the transient keyword in <a  title="Java (programmin
 
 This post is an attempt to explain what transient is (which most people should know) and an example of how it is used, using the most abused class of my daily work - the java.util.<a  title="Hash table" href="http://en.wikipedia.org/wiki/Hash_table" rel="wikipedia" target="_blank">HashMap</a> class.
 
-<!--more-->
+
 <h2>What is transient?</h2>
 The transient keyword in Java is used on <a  title="Class variable" href="http://en.wikipedia.org/wiki/Class_variable" rel="wikipedia" target="_blank">class variables</a> and is used to indicate to the runtime that this variable should not be considered while serializing the object is being written to a <a  title="Byte stream" href="http://en.wikipedia.org/wiki/Byte_stream" rel="wikipedia" target="_blank">byte stream</a>. To put it in simpler words, if an object is being written to a byte stream then all transient variables will be ignored.
 

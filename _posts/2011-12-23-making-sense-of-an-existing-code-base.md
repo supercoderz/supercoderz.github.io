@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Calling_super_in_ruby.jpg"><img  title="English: A graphical description of the limita..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Calling_super_in_ruby.jpg/300px-Calling_super_in_ruby.jpg" alt="English: A graphical description of the limita..." width="300" height="378" /></a>[/caption]
-
 At least once in our developer lives we would have come across a situation where we need to look at an existing <a  title="Codebase" href="http://en.wikipedia.org/wiki/Codebase" rel="wikipedia">code base</a>, make sense of if, understand exactly what it is doing and fix something. If you are one of the many active contributors to the various open source projects there then you might have done this again and again. You look at a project, find an issue, make a fix, send a patch get it reviewed and get brownie points when they accept it. If you are a <a  title="Software developer" href="http://en.wikipedia.org/wiki/Software_developer" rel="wikipedia">software developer</a> in a large company then you probably got put in that place when a developer quit or someone had to revive the code of a legacy application.
+
+<a href="http://commons.wikipedia.org/wiki/File:Calling_super_in_ruby.jpg"><img  title="English: A graphical description of the limita..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Calling_super_in_ruby.jpg/300px-Calling_super_in_ruby.jpg" alt="English: A graphical description of the limita..." width="300" height="378" /></a>
 
 The situation is unavoidable, and presents us all with different things to react to - oh my god they hard coded this! oh my god i cannot believe this is software engineering! this thing needs a complete rewrite and is beyond saving! Oh my god I cannot believe people don't know this <a  title="Programming language" href="http://en.wikipedia.org/wiki/Programming_language" rel="wikipedia">Programming</a> 101!.
 
@@ -16,7 +16,7 @@ We have the benefit of hindsight and the edge that we are taking a fresh perspec
 
 In this article we will go though a few points about how we can approach these situations.
 
-<!--more-->
+
 <h3>If it runs then it was built for a purpose and not by idiots</h3>
 Whenever we are faced with the task of understanding a code base - Java, C++ or Excel Macro - the first and the most important question is - does the damn thing compile and run? And this question can answer a lot of questions.
 

@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="Enterprise Application Integration. Schema gemaakt door Sander Spek. (Photo credit: Wikipedia)"]<a href="http://commons.wikipedia.org/wiki/File:EAI.png" target="_blank"><img  title="Enterprise Application Integration. Schema gem..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/EAI.png/300px-EAI.png" alt="Enterprise Application Integration. Schema gem..." width="300" height="205" /></a>[/caption]
-
 Before you decide to shoo-shoo this post and call me someone who has no idea how great <a  title="Distributed computing" href="http://en.wikipedia.org/wiki/Distributed_computing" rel="wikipedia" target="_blank">distributed systems</a> are - forget that idea. I am not talking about all the social networks or the high volume websites out there, I am not talking about the oh-so-agile and oh-so-great enterprise software that you built last night. I have worked all my life in building <a  title="Message" href="http://en.wikipedia.org/wiki/Message" rel="wikipedia" target="_blank">messaging</a> layers that facilitate distributed systems and I still swear by them. I am just going to talk about a different thing here.
+
+<a href="http://commons.wikipedia.org/wiki/File:EAI.png" target="_blank"><img  title="Enterprise Application Integration. Schema gem..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/EAI.png/300px-EAI.png" alt="Enterprise Application Integration. Schema gem..." width="300" height="205" /></a>
 
 So, lets take a case shall we - you have this large enterprise system dealing with live updates flowing in and out of it all through the day. You have followed all the <a  title="Service-oriented architecture" href="http://en.wikipedia.org/wiki/Service-oriented_architecture" rel="wikipedia" target="_blank">SOA</a> best patterns and isolated the components that do the boiler plate byte streaming in and and out of the platform and the components that persist, retrieve the data and apply <a  title="Business logic" href="http://en.wikipedia.org/wiki/Business_logic" rel="wikipedia" target="_blank">business logic</a>. All these talk to each other by means of the latest high speed messaging layer that beats the speed of light. Everything is messaging based and there can be no other way. In this mix, you are building a component that has to publish two business messages that need to go out and get an acknowledgement from your partner external applications - and you want an all or nothing commit on the other side. If one message fails, then both should roll back. You do not control the sequence of message once you fire them, the byte pumping components cannot have business logic.
 
@@ -28,7 +28,7 @@ OK some of these are exaggerated - but the last few items are the ones which mak
 
 This post is to discuss a few of these aspects, but in a different point of view.
 
-<!--more-->
+
 <h2>The world before all these fancy distributed applications</h2>
 When I first started development on my job, I used to build adapters. The adapter would connect to the applications, listen for changes in the application and publish out or listen for messages from other applications and do the updates in the application. I built 4 such adapters, each had its own logic, but all of them published back to the same <a  title="TIBCO Rendezvous" href="http://www.tibco.com/software/messaging/rendezvous" rel="homepage" target="_blank">TIBCO Rendezvous</a> bus. There was nothing called service, just applications that each did their own thing and published data out when they were done. Or took data, and processed it on their own sweet time. In all the productions support cases that I attended, I never saw any of our users trying to do a distributed processing based on these adapters.
 

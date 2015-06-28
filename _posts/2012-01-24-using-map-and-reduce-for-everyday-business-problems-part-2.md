@@ -8,7 +8,7 @@ categories:
 
 In my <a title="map reduce part 1" href="http://supercoderz.in/2012/01/21/using-map-and-reduce-for-everyday-business-problems-part-1/">last post</a> I described what kind of scenarios in our everyday business problems can be solved using map and reduce - we can do this even though we don't have the kind of computing power that <a  title="Google" href="http://google.com" rel="homepage">Google</a> or Facebook have. In this post I will show how we can implement a map and reduce approach to solve a pseudo-real business problem in <a  title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python</a>. Python provides in-built functions for map and reduce which we will use in this example.
 
-<!--more-->
+
 <h2>The problem</h2>
 The problem that we will use is creating a large number of database records. We will use Python and <a  title="MongoDB" href="http://www.mongodb.org/" rel="homepage">MongoDB</a>. The scenario is creating a large number of entries in the database. This is something that we do each time we process a large input data set and import that into our database.
 

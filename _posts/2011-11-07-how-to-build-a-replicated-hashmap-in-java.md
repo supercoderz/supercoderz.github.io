@@ -11,7 +11,7 @@ We all have heard about clustered <a  title="Application server" href="http://en
 Is it all black magic that is too hard to comprehend? No - its just simple logic built into the entities that store the data.
 
 In this post I will describe how you can build a simple replicating <a  title="Hash table" href="http://en.wikipedia.org/wiki/Hash_table" rel="wikipedia">HashMap</a> in Java. I will build this replication using few lines of code in Netty - the easy to use NIO library from <a  title="JBoss application server" href="http://www.jboss.com/products/platforms/application/" rel="homepage">JBoss</a>.
-<h3><!--more-->So what do we want to do?</h3>
+<h3>So what do we want to do?</h3>
 We want to build a replicating HashMap - as in we create an instance of the map, add data to it and the data is magically transported across the ether to another HashMap running in a different JVM!
 <h3>Wow! What high end tools do we need for this?</h3>
 We don't need much - just the usual Java and Netty NIO framework. We will use basic Java ConcurrentHashMap and HashMap classes for data storage and Netty to build the back end communication. We could have built the back end communication in any manner - <a  title="Java Management Extensions" href="http://en.wikipedia.org/wiki/Java_Management_Extensions" rel="wikipedia">JMX</a>, Database or sockets. Netty provides an easy to use approach to build this using plain old sockets.

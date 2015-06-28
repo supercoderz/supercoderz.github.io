@@ -14,7 +14,7 @@ There are lots of blogs, discussions etc on the internet and even stories like h
 
 In this post, I will try to explain and understand how open development works, and whether it works for everyone or not.
 
-<!--more-->
+
 <h2>Something similar to open development - the global development model</h2>
 Before we go to the concept of open development, lets take a look at something that is similar and involves an equally large number of collaborating developers - Global Development Model. I would say essentially this is something that gave rise to the outsourcing and off shoring of work to different countries - someone got the great idea that if we are building software to a predetermined set if requirements and the requirements are sufficiently documented in such a manner that developers across multiple geographies have access to these and everyone has a common understanding of what needs to be done, then the question of who exactly is coding the software is a trivial matter and the code produced by everyone should be more or less the same. So we can get the work done by developers across the world in their own time zones and we should be able to cut down our development time.
 

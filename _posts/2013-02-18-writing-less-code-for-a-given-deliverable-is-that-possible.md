@@ -14,7 +14,7 @@ What  I am talking about is different - can you have a framework, that can be u
 
 This is very much possible, and is done in many cases, however the issue will be if we try to apply this to every solution and every business scenario. This post tries to understand where we can and where we cannot expect to see this kind of thing and why.
 
-<!--more-->
+
 <h2>How do we decide how much code we write for any given problem solution?</h2>
 The most obvious answer is that it depends on the requirements - we write code for all the business requirements and then we write code for the tests. Simple. But if we dig a bit here and think more about how we decide what the requirements are then we will find that the requirements are determined by -
 <ol>

@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:EAI.png"><img  title="Enterprise Application Integration. Schema gem..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/EAI.png/300px-EAI.png" alt="Enterprise Application Integration. Schema gem..." width="300" height="205" /></a>[/caption]
-
 Just why do you use messaging? If you don't use messaging or have never heard about it, then - read on.
+
+<a href="http://commons.wikipedia.org/wiki/File:EAI.png"><img  title="Enterprise Application Integration. Schema gem..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/EAI.png/300px-EAI.png" alt="Enterprise Application Integration. Schema gem..." width="300" height="205" /></a>
 
 If I do a Google search for why do you use messaging, I get answers that are mostly
 <ul>
@@ -27,7 +27,7 @@ Did the world go through a lot while I was sleeping?
 Full disclosure, I was and am a messaging/middleware guy who re-built from scratch parts of bespoke messaging application, worked on what is called <a  title="Enterprise application integration" href="http://en.wikipedia.org/wiki/Enterprise_application_integration" rel="wikipedia">Enterprise Application Integration</a> using <a  title="TIBCO Rendezvous" href="http://www.tibco.com/software/messaging/rendezvous" rel="homepage">TIBCO Rendezvous</a> - a very fast messaging platform - and still does a lot of interfacing with messaging layers - the main aim always being to get the message across correct and fast. Scaling is a side effect in my job.
 
 In this post, I will try to explain some of the use cases where messaging is used and which do not come under the scalability, distributed apps etc etc buzzwords. What I am trying to highlight here is that messaging is used to keep the enterprise, the business together and make it work smoothly rather than just scaling or distributing workload for asynchronous processing.
-<h2><!--more-->Just what kind of messaging will I talk about?</h2>
+<h2>Just what kind of messaging will I talk about?</h2>
 If you want to think of messaging in terms of a formal definition then you can think of it as two components communicating with each other by sending data in a agreed format, sometimes following a specified schema. Its like you write a letter and post it with stamps. Simple.
 
 Since we said components, there can be two cases -

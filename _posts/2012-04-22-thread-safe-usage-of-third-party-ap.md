@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="A multithreaded process with two threads executing in time clearly showing that the threads execute separately and execute mutually exclusively in time. (Photo credit: Wikipedia)"]<a href="http://commons.wikipedia.org/wiki/File:Multithreaded_process.svg" target="_blank"><img  title="A multithreaded process with two threads execu..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Multithreaded_process.svg/300px-Multithreaded_process.svg.png" alt="A multithreaded process with two threads execu..." width="300" height="283" /></a>[/caption]
-
 <a  title="Thread (computer science)" href="http://en.wikipedia.org/wiki/Thread_%28computer_science%29" rel="wikipedia" target="_blank">Multithreaded</a>  programming is is not rocket science but is still difficult to get right. Anyone who has done a moderately complex solution with more than two threads knows how things can quickly get out of hand. In fact it is possible to get things in a mess even with two threads.
+
+<a href="http://commons.wikipedia.org/wiki/File:Multithreaded_process.svg" target="_blank"><img  title="A multithreaded process with two threads execu..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Multithreaded_process.svg/300px-Multithreaded_process.svg.png" alt="A multithreaded process with two threads execu..." width="300" height="283" /></a>
 
 If you are building your own library and have to deal with threads, then you can use the various mechanisms in most modern <a  title="Programming language" href="http://en.wikipedia.org/wiki/Programming_language" rel="wikipedia" target="_blank">programming languages</a> and get the correct solution. With enough testing and enough experience, you  an consistently get the right solution.
 
@@ -16,7 +16,7 @@ However, if you are using a third party library which might or might not be thre
 
 This post is an attempt to understand some such scenarios.
 
-<!--more-->
+
 <h3>Is this really a problem?</h3>
 If you think about it, most modern software is built by reasonably well minded and capable developers, they probably built everything correct. But then, most software these days is way more complicated than it used to be and with one person working on a small part of the whole, things can be missed. Also, when building something, you test it for certain benchmark loads, scales and usage scenarios. In real life, things are more often than not pushed to the limits, and when limits are breached then things break.
 

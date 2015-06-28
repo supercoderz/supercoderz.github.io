@@ -6,15 +6,15 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:The-amqp-model-for-wikipedia.svg" target="_blank"><img  title="AMQP Model" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The-amqp-model-for-wikipedia.svg/300px-The-amqp-model-for-wikipedia.svg.png" alt="AMQP Model" width="300" height="225" /></a> AMQP Model (Photo credit: Wikipedia)[/caption]
-
 Disclaimer - I am not going to reveal here that <a  title="Message" href="http://en.wikipedia.org/wiki/Message" rel="wikipedia" target="_blank">messaging</a> systems are built from a secret alien technology that none of us knew about. We all know that messaging <a  title="Application software" href="http://en.wikipedia.org/wiki/Application_software" rel="wikipedia" target="_blank">applications</a> are built using simple sockets, <a  title="Transmission Control Protocol" href="http://www.techopedia.com/definition/5773/transmission-control-protocol-tcp" rel="techopedia" target="_blank">TCP</a> or <a  title="User Datagram Protocol" href="http://en.wikipedia.org/wiki/User_Datagram_Protocol" rel="wikipedia" target="_blank">UDP</a> protocol, some sort of mechanism to represent queues or topics, some storage on the back end to persist messages between restarts, a means to subscribe to data and receive call backs. These are generally all that you have in a messaging system.
+
+<a href="http://commons.wikipedia.org/wiki/File:The-amqp-model-for-wikipedia.svg" target="_blank"><img  title="AMQP Model" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The-amqp-model-for-wikipedia.svg/300px-The-amqp-model-for-wikipedia.svg.png" alt="AMQP Model" width="300" height="225" /></a> AMQP Model (Photo credit: Wikipedia)
 
 If you never knew about messaging systems, then the above probably gave you an idea about what they are built of.
 
 What I am going to tell here is what parts of this need to be super tuned and super fast in order to get a <a  title="Low latency" href="http://en.wikipedia.org/wiki/Low_latency" rel="wikipedia" target="_blank">low latency</a> messaging platform. This is based upon my experience of building and using some such platforms.
 
-<!--more-->
+
 <h2>What is a low latency messaging platform?</h2>
 A low latency messaging platform is one that takes a message from a source and gets it to the destination in the shortest time possible. It has to be able to do this again and again no matter what the load on the system. Simple. If you think about it, all the  platform has to do is to take the message from the source, put some headers and routing information on that, stream it out on a socket to a server and from there to the <a  title="Subscription business model" href="http://en.wikipedia.org/wiki/Subscription_business_model" rel="wikipedia" target="_blank">subscriber</a> or directly to the subscriber in some cases.
 

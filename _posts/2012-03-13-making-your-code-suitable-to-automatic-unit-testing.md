@@ -6,19 +6,19 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="240" caption="Unit Test (Photo credit: Paul Watson)"]<a href="http://www.flickr.com/photos/51035609331@N01/43393028" target="_blank"><img  title="Unit Test" src="http://farm1.static.flickr.com/32/43393028_960dd71a0b_m.jpg" alt="Unit Test" width="240" height="159" /></a>[/caption]
-
 If you tell me about unit tests and the importance of having those to build a good application, my emotions swing between two extremes - one where I fantasize about having the perfectly unit tested software, and two where I want to vent my frustration on those tests being broken - everything in between rarely crosses my mind.
+
+<a href="http://www.flickr.com/photos/51035609331@N01/43393028" target="_blank"><img  title="Unit Test" src="http://farm1.static.flickr.com/32/43393028_960dd71a0b_m.jpg" alt="Unit Test" width="240" height="159" /></a>
 
 The fantasy is best described by this article about <a  title="Google" href="http://google.com" rel="homepage" target="_blank">Google</a> fixing a Chrome security flaw in less than 24 hours - <a href="http://arstechnica.com/business/news/2012/03/after-the-pwnage-critical-google-chrome-hole-plugged-in-24-hours.ars">http://arstechnica.com/business/news/2012/03/after-the-pwnage-critical-google-chrome-hole-plugged-in-24-hours.ars</a>
 
 The other extreme is best described by this Hitler meme video -
 
-[youtube=http://www.youtube.com/watch?NR=1&amp;feature=endscreen&amp;v=T-Qn_-F2x1c]
+<iframe width="420" height="315" src="https://www.youtube.com/watch?NR=1&amp;feature=endscreen&amp;v=T-Qn_-F2x1c" frameborder="0" allowfullscreen></iframe>
 
 So, why do I get such extreme emotions? And is it so difficult to get unit tests? You can get there and have the best automatic unit testing experience - but first you must prepare your code for unit testing.
 
-<!--more-->
+
 <h3>A few words about the Google fix in 24 hours</h3>
 I am amazed, but I know it is because of discipline and is not magic.
 

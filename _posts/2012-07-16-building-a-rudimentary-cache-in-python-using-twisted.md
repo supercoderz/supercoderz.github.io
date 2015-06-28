@@ -12,7 +12,7 @@ So what do you need? You need Python, I used version 2.7, and the Twisted framew
 
 Once you have these two - read on.
 
-<!--more-->
+
 <h2>Basics of twisted - protocol</h2>
 When you start writing sockets in Twisted, you need to have a protocol that will handle the data that comes from the <a  title="Client (computing)" href="http://en.wikipedia.org/wiki/Client_%28computing%29" rel="wikipedia" target="_blank">client</a>. Twisted provides implementations of the most popular <a  title="Communications protocol" href="http://en.wikipedia.org/wiki/Communications_protocol" rel="wikipedia" target="_blank">protocols</a>, and you can build on top of these or using the base protocol class. Once you have a protocol, it is recommended that you build a protocol factory that can be used to instantiate the protocol. This also is very simple. All this can be achieved in very very few <a  title="Source lines of code" href="http://en.wikipedia.org/wiki/Source_lines_of_code" rel="wikipedia" target="_blank">lines of code</a> - I found that if I used something like Netty or Mina in Java, then I would write far more lines of code to get this done and doing it in Python is a breeze. The screenshot below shows all the code required to create the basic cache protocol that I built. More on why I built it using a <a  title="DICT" href="http://en.wikipedia.org/wiki/DICT" rel="wikipedia" target="_blank">dict</a>, but this is pretty much it.
 <p style="text-align:center;"><a href="http://supercoderz.files.wordpress.com/2012/07/protocol.png"><img class="aligncenter size-medium wp-image-368" title="protocol" src="http://supercoderz.files.wordpress.com/2012/07/protocol.png?w=300" alt="" width="300" height="256" /></a></p>

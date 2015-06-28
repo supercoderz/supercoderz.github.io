@@ -6,15 +6,15 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:CpuTimeonSingleCpuMultiTaskingSystem.png" target="_blank"><img  title="English: CPU Time on Single CPU Multi Tasking ..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/CpuTimeonSingleCpuMultiTaskingSystem.png/300px-CpuTimeonSingleCpuMultiTaskingSystem.png" alt="English: CPU Time on Single CPU Multi Tasking ..." width="300" height="202" /></a>[/caption]
-
 We all need to measure time, whether we are late for an appointment or if we want to decide how much more we can laze before we need to get going. In our daily life, thankfully, we only deal with minutes and hours, rarely with seconds. This makes it easy. But it is a different story when we deal with computers and software - we need to measure in terms of milliseconds and microseconds. Some applications like low latency market data for financial institutions demand nano second precision in this fast paced world of electronic trading.
+
+<a href="http://commons.wikipedia.org/wiki/File:CpuTimeonSingleCpuMultiTaskingSystem.png" target="_blank"><img  title="English: CPU Time on Single CPU Multi Tasking ..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/CpuTimeonSingleCpuMultiTaskingSystem.png/300px-CpuTimeonSingleCpuMultiTaskingSystem.png" alt="English: CPU Time on Single CPU Multi Tasking ..." width="300" height="202" /></a>
 
 The servers and computers that we use and the operating systems that we use in today's world provide us the means to measure time accurately. And they work in 99.99% of all the cases - but there are cases where they don't work with the precision that we want or would like to demand. Out of these .01% cases, 99% cases are never noticed - only a small 1% of these ever gets noticed - that was when you had that serious production issue with something that happened too late, to early or never happened at all.
 
 Makes you wonder - do these things really work? This post aims to clarify some of the aspects around the various <a  title="Time" href="http://en.wikipedia.org/wiki/Time" rel="wikipedia" target="_blank">time measurement</a> requirements for timers and timed events and why they work or fail.
 
-<!--more-->
+
 <h2>Some reading material</h2>
 If you work with Java, then this article from Oracle is a very good explanation of how the clocks in the VM work, the different types of time measurement - the free running nano second counter that counts the cycles between operations and the interrupt based clock that calculates milliseconds - and the conversions between the two etc.
 

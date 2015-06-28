@@ -9,7 +9,7 @@ categories:
 In my last post I described how a <a  title="Workflow engine" href="http://en.wikipedia.org/wiki/Workflow_engine" rel="wikipedia">workflow engine</a> works and the various key parts of a workflow engine. In this post I will show you how to build  simple workflow engine in Python. This will be built in Python using the <a  title="Django (web framework)" href="http://www.djangoproject.com" rel="homepage">django framework</a>.
 
 Read on to find out more - It would be recommended to get an overview of django framework if you plan to download the code and try this out. I will not be going into the details of how to setup django and the internals.
-<h3><!--more-->The basic idea</h3>
+<h3>The basic idea</h3>
 The idea of this post is to show a simple workflow engine. We will build a workflow engine that can take a process and a set of tasks associated with the process in a given sequence and execute the tasks. The tasks can be code tasks which have a piece of <a  title="Python (programming language)" href="http://www.python.org/" rel="homepage">Python code</a> that would be executed, or manual tasks which would require someone to approve the task.
 
 The work of creating the tasks and storing them somewhere in a DB will be handled by django. django is a web development framework for Python that makes building web applications very easy. The django admin application which comes bundled with the framework make it very trivial to create simple <a  title="Create, read, update and delete" href="http://en.wikipedia.org/wiki/Create%2C_read%2C_update_and_delete" rel="wikipedia">CRUD</a> web pages for databases.

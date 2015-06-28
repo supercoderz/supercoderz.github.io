@@ -6,7 +6,7 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://en.wikipedia.org/wiki/File:Sample_sawtooth.jpg" target="_blank"><img  title="The &quot;sawtooth&quot; pattern of memory uti..." src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Sample_sawtooth.jpg/300px-Sample_sawtooth.jpg" alt="The &quot;sawtooth&quot; pattern of memory uti..." width="300" height="200" /></a> The "sawtooth" pattern of memory utilization: the sudden drop in used memory is a candidate symptom for a memory leak. (Photo credit: Wikipedia)[/caption]
+
 
 I am a core <a  title="java development tools" href="http://download.cnet.com/windows/java-software/" rel="downloadcom" target="_blank">Java</a> developer, and have been doing that for about 8 years now, and when people come to me and ask me how much more memory my application will need or complain that Java applications eat up memory on the boxes - I just give them a dry smile, not wishing to comment or explain to them why my applications are no different from their applications. Even C++ or Python applications can and will use memory and that is what even they have <a  title="Memory leak" href="http://en.wikipedia.org/wiki/Memory_leak" rel="wikipedia" target="_blank">memory leaks</a>. Java is not the only memory hog out there - yes we demand our pound of flesh up front in the form of <a  title="Dynamic memory allocation" href="http://en.wikipedia.org/wiki/Dynamic_memory_allocation" rel="wikipedia" target="_blank">heap space</a>, but we live within that.
 
@@ -14,7 +14,7 @@ Anyways, when designing applications and deciding how many to run per box, espec
 
 This post is an attempt to understand how you measure the amount of memory needed by your application.
 
-<!--more-->
+
 <h2>A real life example of how things go wrong when you have too much in memory</h2>
 I would like to give some example that I personally know, but since I cannot do that I will give you an example which I read almost once a month - the massive Foursqaure outage some time back, which did not affect me in any way since I don't use that site, but has good lessons for me. Read the below link, and come back to read on -
 

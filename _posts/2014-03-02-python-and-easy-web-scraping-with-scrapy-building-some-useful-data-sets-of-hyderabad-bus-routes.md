@@ -10,7 +10,7 @@ Web scraping has been around for a long time, and there are a lot many libraries
 
 I will not go into what scraping is - I will instead go into something I did with this in a couple of hours to get some useful data.
 
-<!--more-->
+
 <h2>The problem</h2>
 I come form Hyderabad in south India. Hyderabad along with Bangalore were the first cities where most of the IT majors started out in India. And yet most of the information about the city is hard to find online. Given that most people are not fully connected to the internet and/or are not mature enough to have a fully online integrated way of life, this doesn't create major life threatening hassles. Maybe some minor inconveniences with the lack of systems or many non-interconnected systems.
 

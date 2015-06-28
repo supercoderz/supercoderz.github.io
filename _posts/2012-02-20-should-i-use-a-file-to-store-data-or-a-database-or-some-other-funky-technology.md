@@ -12,7 +12,7 @@ I am guessing your answer will be yes. I have heard that too. It is surprising t
 
 So why do we think that way? Are files really so un-cool and out of fashion?
 
-<!--more-->
+
 <h2> What does a file provide?</h2>
 A file provides a very basic interface - open it, write some bytes, close the file. The data will be written to disk and will be available when you open it again. Nothing more. A file doesn't care what the bytes you write into it, and it doesn't try to fit those bytes into any structure that it enforces. So, lets say you wrote a set of alphabets into a file, then it doesn't care what they are or if they make a meaningful word or sentence. It ensures the data is correct, and you worry about how to interpret the data in your application.
 

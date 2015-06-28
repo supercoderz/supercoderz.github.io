@@ -12,7 +12,7 @@ As time goes by, every technology either gets outdated because new versions or b
 
 And here in lies the great clash of the old and new - the old preferring to stay the way they were because it ain't broken and the new trying to prove how shiny they are. Its not wrong from either perspective.
 
-<!--more-->
+
 <h3>Reasons for change</h3>
 Reasons for change are plenty, for example
 <ul>

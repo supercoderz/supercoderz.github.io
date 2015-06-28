@@ -12,7 +12,7 @@ This post is not about how to use <a  title="Python (programming language)" href
 
 Instead this post is about how much I , a primarily <a  title="Java (programming language)" href="http://www.oracle.com/technetwork/java/" target="_blank" rel="homepage">Java</a> guy, enjoy the decorators in Python.
 
-<!--more-->
+
 <h2>Java does have decorators, they are called annotations</h2>
 Java has annotations, but the problem is that they don't do much. You <a  title="Annotation" href="http://en.wikipedia.org/wiki/Annotation" target="_blank" rel="wikipedia">annotate</a> your methods or classes with a annotation that you defined, and pass it a few parameters if you want to. But that's about it - that by itself cannot do anything. You need to define the retention type of the annotation - whether it makes to the compiled <a  title="Bytecode" href="http://en.wikipedia.org/wiki/Bytecode" target="_blank" rel="wikipedia">byte code</a> or not - and then you need to write some code that can inspect your objects, check if there was an annotation and then do something with the annotated class or <a  title="Method (computer programming)" href="http://en.wikipedia.org/wiki/Method_%28computer_programming%29" target="_blank" rel="wikipedia">method</a>.
 

@@ -11,7 +11,7 @@ Lets admit it - writing an application in Java takes a lot more code lines and c
 &nbsp;
 
 There are different ways in which you can build a <a  title="Java (software platform)" href="http://www.java.com" rel="homepage">Java application</a> correctly using the age old known best practices and get the rapid development and agility that you want. In this blog I will describe a probably known but less frequently used way to add more agility to your Java applications. This could be used for web or non-web Java applications alike.
-<h3><!--more-->So whats the silver bullet?</h3>
+<h3>So whats the silver bullet?</h3>
 &nbsp;
 
 Its not really a silver bullet, and it has been around for a while - its the <a  title="Scripting for the Java Platform" href="http://en.wikipedia.org/wiki/Scripting_for_the_Java_Platform" rel="wikipedia">JSR-223</a> Java Scripting extension. This part of Java, available under the javax.script package enables developers to embed a scripting language of their choice in the Java application and let it execute scripts. These scripts can be user entered or maybe loaded from a file or socket.

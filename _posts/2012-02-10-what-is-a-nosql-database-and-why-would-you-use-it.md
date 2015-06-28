@@ -16,7 +16,7 @@ I think there are a lot of misconceptions about NoSQL, and this Stackoverflow qu
 
 This post is an attempt to describe what is the difference between ACID and BASE, key differences between NoSQL and RDBMS databases and why exactly should you use them.
 
-<!--more-->
+
 <h2>Different use cases for data storage</h2>
 We all want to store data and retrieve it later for different purposes - its a very simple statement. But if you dig deeper, there will be some interesting scenarios like
 <ul>

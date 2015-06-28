@@ -8,14 +8,14 @@ categories:
 
 <div >
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:ChangeManagementAttivit%C3%A0.jpg"><img title="The Change Management Process's Activities" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/ChangeManagementAttivit%C3%A0.jpg/300px-ChangeManagementAttivit%C3%A0.jpg" alt="The Change Management Process's Activities" width="300" height="60" /></a>[/caption]
+
 
 </div>
 Some of us have seen <a  title="Dexter's Lab" href="http://www.cartoonnetwork.com/tv_shows/dexter/" rel="hulu">Dexter's lab</a> on cartoon network as kinds and some of us have seen something like this in a movie or somewhere else - an elaborate setup where a small action like opening a door starts a process, a ball drops, it moves a lever which in turn starts a flow of water through a set of twisting and turning test tubes which does something else and finally after a long route some small result happens like a bulb glowing or a trap door opening. If it was setup by a bad guy in a movie then it probably kills someone or something bad. I forget what it is called but its an elaborate setup to achieve something which is a small goal compared to what must have gone in to build the setup.
 
 This is exactly what change management sometimes feels like.
 
-<!--more-->
+
 <h3>Change is the only constant</h3>
 We all make changes on our software everyday. We might do a big release once in a quarter or once in a year but we make changes most often. Some enhancement, some improvement, some fix for a scenario that we did not think about or some weird bug that happened when the user logged in from home and entered the input using a Japanese keyboard. But we do make changes. Sometimes there are emergency changes when there is a production issue and sometimes we sneak in a change to control the damage before anyone notices.
 

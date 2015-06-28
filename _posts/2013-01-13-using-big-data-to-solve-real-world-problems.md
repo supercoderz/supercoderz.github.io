@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="240"]<a href="http://www.flickr.com/photos/48889057888@N01/6259499293" target="_blank"><img  title="Big Data" alt="Big Data" src="http://farm7.static.flickr.com/6104/6259499293_b577b94cfd_m.jpg" width="240" height="160" /></a> Big Data (Photo credit: Kevin Krejci)[/caption]
-
 <a  title="Big data" href="http://en.wikipedia.org/wiki/Big_data" target="_blank" rel="wikipedia">Big Data</a> - large data sets on the order of petabytes - this is a buzz word that you must have heard each time you hear about the next big internet website or social network or e-commerce website. Amazon, <a  title="Google" href="http://google.com" target="_blank" rel="homepage">Google,</a> <a  title="Facebook" href="http://facebook.com" target="_blank" rel="homepage">Facebook</a>, Netflix and many more large internet corporations have proved time and again that Big Data and analysis on these data sets can provide you the critical business intelligence that will take you to the next level and make you the absolute leader. Great!
+
+<a href="http://www.flickr.com/photos/48889057888@N01/6259499293" target="_blank"><img  title="Big Data" alt="Big Data" src="http://farm7.static.flickr.com/6104/6259499293_b577b94cfd_m.jpg" width="240" height="160" /></a> Big Data (Photo credit: Kevin Krejci)
 
 You might be tempted to think that Big Data is relevant only within this field of internet websites, but in reality it is used and can be used in a variety of ways not connected to an internet website. Banks for example lave huge data sets on positions, prices and other market parameters and use this data to derive information on their risk and also to plan trading strategies. Its not exactly exciting to talk about when compared to social networks, but is a good use case.
 
@@ -16,7 +16,7 @@ The other day I was reading something that said Big Data can revolutionize the w
 
 This post is an attempt to understand how we can use Big Data in real life scenarios.
 
-<!--more-->
+
 <h2>A pre-web 2.0 example on Big Data in real world solutions</h2>
 About 10 years ago, long before we saw the NOSQL databases which are so popular and I think just around the time that Google released the <a  title="MapReduce" href="http://en.wikipedia.org/wiki/MapReduce" target="_blank" rel="wikipedia">MapReduce</a> and <a  title="BigTable" href="http://en.wikipedia.org/wiki/BigTable" target="_blank" rel="wikipedia">BigTable</a> papers, I visited the <a  title="National Remote Sensing Centre" href="http://en.wikipedia.org/wiki/National_Remote_Sensing_Centre" target="_blank" rel="wikipedia">National Remote Sensing Agency</a> (NRSA) offices in <a  title="India" href="http://maps.google.com/maps?ll=28.6133333333,77.2083333333&amp;spn=10.0,10.0&amp;q=28.6133333333,77.2083333333 (India)&amp;t=h" target="_blank" rel="geolocation">India</a> as part of a college academic tour. The main aim was to understand how the agency acquired satellite images, how it processed them and how it would extract information from them.
 

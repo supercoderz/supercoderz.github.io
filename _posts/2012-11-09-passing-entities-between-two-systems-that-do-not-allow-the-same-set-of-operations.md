@@ -13,7 +13,7 @@ But none of these matters to the requirements of the adapter and you will eventu
 
 This post is an attempt to understand how we can handle these cases and what kind of issues we can run into.
 
-<!--more-->
+
 <h2>Why do differences arise and what sort of cases can we run into</h2>
 Why do differences arise? They usually arise because of the way the business requirement was analyzed and the design decision that was taken when building the system. Lets take the example of <a  title="Bookkeeping" href="http://en.wikipedia.org/wiki/Bookkeeping" target="_blank" rel="wikipedia">book keeping</a> - accounts. If I made an entry in a book saying I have a credit of 100$, and I want to correct it, then ideally I need to cancel this old 100$ entry, and then make an entry for the new amount, lets say 150$. If you were manually making a <a  title="Book entry" href="http://en.wikipedia.org/wiki/Book_entry" target="_blank" rel="wikipedia">book entry</a> with pen and paper, you can either strike off the old entry and make a new one, correct the old entry by overwriting or make a debit of 100$ and then a credit of 150$. While the last case implicitly keeps an audit of what was changed when, the first two cases require that you somehow maintain the audit trail using maybe a side note.
 

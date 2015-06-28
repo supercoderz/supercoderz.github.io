@@ -6,14 +6,11 @@ comments: false
 categories:
 ---
 
-<div >
-
-[caption id="" align="alignright" width="239" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Software_spanner.png"><img title="Programming in the large and programming in th..." src="http://upload.wikimedia.org/wikipedia/commons/8/82/Software_spanner.png" alt="Programming in the large and programming in th..." width="239" height="184" /></a>[/caption]
-
-</div>
 Sometime back when I was in <a  title="India" href="http://maps.google.com/maps?ll=28.6133333333,77.2083333333&amp;spn=10.0,10.0&amp;q=28.6133333333,77.2083333333 (India)&amp;t=h" rel="geolocation">India</a> and talking to my brother, he mentioned that he could not get himself to work on building something abstract like <a  title="Computer software" href="http://en.wikipedia.org/wiki/Computer_software" rel="wikipedia">software</a> which mostly takes shape inside the developers head. He works in accounts and finance and is more used to dealing with numbers and facts that exist on the books. To an extent he is correct - software starts as an idea in someones head and then manifests itself as a set of applications or services that process or provide data that performs the tasks and in these days of big enterprises spread across the globe and using IT to drive <a  title="Business" href="http://en.wikipedia.org/wiki/Business" rel="wikipedia">business</a>, it helps make money by providing efficiencies.
 
-<!--more-->
+<a href="http://commons.wikipedia.org/wiki/File:Software_spanner.png"><img title="Programming in the large and programming in th..." src="http://upload.wikimedia.org/wikipedia/commons/8/82/Software_spanner.png" alt="Programming in the large and programming in th..." width="239" height="184" /></a>
+
+
 <h3>Why build software?</h3>
 Why do we build software? In my day job I build software for a bank that provides financial services to clients and makes money for them. It makes this money by leveraging the different opportunities that exist across geographies so it becomes important that we build software that can provide all this information in a consistent manner and enable our business to take decisions that will make the best of the opportunities.
 

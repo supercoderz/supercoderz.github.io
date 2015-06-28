@@ -6,7 +6,7 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:UML_DP_Proxy.png" target="_blank"><img  title="UML Class Diagram of the Proxy Design Pattern" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/UML_DP_Proxy.png/300px-UML_DP_Proxy.png" alt="UML Class Diagram of the Proxy Design Pattern" width="300" height="192" /></a> UML Class Diagram of the Proxy Design Pattern (Photo credit: Wikipedia)[/caption]
+
 
 Most of us, if not all, have written unit tests for our code using <a  title="JUnit" href="http://junit.sourceforge.net" rel="homepage" target="_blank">JUnit</a> or comparable tools. In most cases we are in control of what is being tested and we can provide all the inputs that are needed to test the scenario. But then there are cases where there are external factors or classes that cannot be instantiated for tests and we need to find ways to simulate them - the suggested approach is to use <a  title="Mock object" href="http://en.wikipedia.org/wiki/Mock_object" rel="wikipedia" target="_blank">mock objects</a>.
 
@@ -14,7 +14,7 @@ There are many frameworks like <a  title="EasyMock" href="http://www.easymock.or
 
 How do they mock objects? Turns out it is not magic.
 
-<!--more-->
+
 <h2>Proxy Pattern</h2>
 The Proxy pattern is the core of any mock framework. As per Wikipedia, Proxy Pattern is defined as
 <blockquote>A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate.</blockquote>

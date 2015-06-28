@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://en.wikipedia.org/wiki/File:Facebook2007.jpg" target="_blank"><img  title="Facebook profile shown in 2007" src="http://upload.wikimedia.org/wikipedia/en/thumb/2/28/Facebook2007.jpg/300px-Facebook2007.jpg" alt="Facebook profile shown in 2007" width="300" height="311" /></a> Facebook profile shown in 2007 (Photo credit: Wikipedia)[/caption]
-
 If I told you that a person is visting you, gave you no information about that guy, and asked you to prepare a list of things for him to do while he was visiting, will you be able to do a good job of it? You might actually be able to get a so so result but the outcome of whatever you do will be far from good.
+
+<a href="http://en.wikipedia.org/wiki/File:Facebook2007.jpg" target="_blank"><img  title="Facebook profile shown in 2007" src="http://upload.wikimedia.org/wikipedia/en/thumb/2/28/Facebook2007.jpg/300px-Facebook2007.jpg" alt="Facebook profile shown in 2007" width="300" height="311" /></a> Facebook profile shown in 2007 (Photo credit: Wikipedia)
 
 Similarly if I gave you the weather prediction for a week, but the data was accurate to a precision of 10 degrees, then you will have data but not be able to make a informed decision about it since it was not correct to begin with. Whatever you decide will only be a best guess.
 
@@ -18,7 +18,7 @@ These days all the websites that we use a providing a very personalized view to 
 
 This post tries to understand what is required to build such capability in these applications.
 
-<!--more-->
+
 <h2>Its nothing new - it was all there in the past too</h2>
 User level customization and <a  title="Personalization" href="http://en.wikipedia.org/wiki/Personalization" rel="wikipedia" target="_blank">personalization</a> is nothing new - ever since we had Windows 95 and probabaly even in 3.1 as well, if you used a text editor it had the list of recently used files that let the user figure out what he was editing. There was wallpaper and themes, and I am sure there will be <a  title="Unix" href="http://www.unix.org" rel="homepage" target="_blank">UNIX</a> users who will point out that even the command line tools and simple editors had some level of customization - even in VI editor.
 

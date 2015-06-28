@@ -8,7 +8,7 @@ categories:
 
 A while ago I had posted about issues with poll() vs pol(timeout) on the Java concurrent blocking queues, and issues with the bucket sizes of concurrent hash maps. Those solutions worked well - but the issues with locks seems to love me so they are back. And this time time it is on the other end of the operation - the offer() and offer(timeout) calls.
 
-<!--more-->
+
 <h2>The basic problem and solution</h2>
 The application that we use need to resend some data at periodic intervals. So we take the data that was sent the first time and we cache it using ConcurrentHashMap instance. At the time of publish, we take this data and we offer to a linked blocking queue which is polled by a consumer thread. Simple, and works.
 

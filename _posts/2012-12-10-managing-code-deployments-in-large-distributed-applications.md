@@ -10,7 +10,7 @@ Most of us have worked on applications that are small enough that they can be de
 
 This post is an attempt to understand these different cases and the issues that are posed by the choices that we make.
 
-<!--more-->
+
 <h2>So what does deployment depend on? And what sort of issues can it cause?</h2>
 Deployment generally depends on the product and the application. If I was buying an OS, I would expect a CD to be shipped to me, or a link where I can download an <a  title="ISO image" href="http://en.wikipedia.org/wiki/ISO_image" target="_blank" rel="wikipedia">ISO file</a> or now with Apple, buy it in the store online and then download and update the software. In a large enterprise though there are many tools to provision and distribute software - there are many <a  title="Patch management" href="http://www.symantec.com/patch-management" target="_blank" rel="symantec">software management</a> tools from the likes of Microsoft and others that make it a charm to install software. In these cases the entire software is installed on the desktop.
 

@@ -10,7 +10,7 @@ Java provides a LinkedBlockingQueue as part of the standard library from Java 5.
 
 In all these cases, the performance was pretty damn good. But recently I ran into an issue which highlighted some of the subtle caveats around the usage of this class. This post attempts to explain those issues. I cannot divulge or replicate the server configuration, so this discussion will be purely theoretical with pointers to other literature on the internet where applicable.
 
-<!--more-->
+
 <h2>The Problem</h2>
 The problem we had was that on a blade server running <a  title="Red Hat" href="http://www.redhat.com" rel="homepage">Red Hat</a>, our <a  title="Java (software platform)" href="http://en.wikipedia.org/wiki/Java_%28software_platform%29" rel="wikipedia">Java application</a> which consumes messages from a source locked up and hung when processing more than 2000 messages per second. Simple.  We had resolved a previous issue with ConcurrentHashMap and had all the usual bells and whistles like
 <ul>

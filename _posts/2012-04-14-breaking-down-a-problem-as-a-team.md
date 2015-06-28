@@ -6,9 +6,9 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="147" caption="Flow of data in a typical parser (Photo credit: Wikipedia)"]<a href="http://en.wikipedia.org/wiki/File:Parser_Flow.gif" target="_blank"><img  title="Flow of data in a typical parser" src="http://upload.wikimedia.org/wikipedia/en/a/a9/Parser_Flow.gif" alt="Flow of data in a typical parser" width="147" height="409" /></a>[/caption]
-
 If you walked past most programmers these days and asked what is it that they were coding for then the likely answers would be - business requirement, use case, user story, bug fix - maybe a few more, but very few of them will say that they are coding to solve a problem. You may ask if it really matters, i think it does impact how we think about the solution.
+
+<a href="http://en.wikipedia.org/wiki/File:Parser_Flow.gif" target="_blank"><img  title="Flow of data in a typical parser" src="http://upload.wikimedia.org/wikipedia/en/a/a9/Parser_Flow.gif" alt="Flow of data in a typical parser" width="147" height="409" /></a>
 
 Another aspect that is pretty obvious is that not all think and understand in the same manner - so the reasoning that one programmer has got in his head for a problem might not be the same as what another one has got. How we reason out a problem and break it down depends on how we have been trained as kids - cool calm approach, panic, methodical, trial and error etc.
 
@@ -16,7 +16,7 @@ When we throw together a team, the success or failure of that team depends on ho
 
 This post aims to understand the different aspects of how a problem can be broken down and how the team culture helps with getting it right.
 
-<!--more-->
+
 <h3>From problem to a program</h3>
 When I first started programming, we were told that a program is a set of steps, an algorithm, which ultimately solves the problem. And this can be repeated again and again. Notice that this definition that we were given does not have <a  title="Object-oriented programming" href="http://en.wikipedia.org/wiki/Object-oriented_programming" rel="wikipedia" target="_blank">OOP</a> or any high level abstraction in it - it is just a few steps that solve a problem. We were also told that as the steps become longer, or repetitive, you could create a <a  title="Subroutine" href="http://en.wikipedia.org/wiki/Subroutine" rel="wikipedia" target="_blank">sub routine</a> and call that in the main program. This was the old procedural world and I used <a  title="BASIC" href="http://en.wikipedia.org/wiki/BASIC" rel="wikipedia" target="_blank">BASIC</a>, <a  title="Comparison of Pascal and C" href="http://en.wikipedia.org/wiki/Comparison_of_Pascal_and_C" rel="wikipedia" target="_blank">PASCAL and C</a> in those days.
 

@@ -6,11 +6,11 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300"]<a href="http://en.wikipedia.org/wiki/File:Rvrd-multicasting.jpg" target="_blank"><img  title="300" src="http://upload.wikimedia.org/wikipedia/en/thumb/5/58/Rvrd-multicasting.jpg/300px-Rvrd-multicasting.jpg" alt="300" width="300" height="191" /></a> 300 (Photo credit: Wikipedia)[/caption]
-
-[caption id="" align="alignright" width="300"]<a href="http://commons.wikipedia.org/wiki/File:The-amqp-model-for-wikipedia.svg" target="_blank"><img  title="AMQP Model" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The-amqp-model-for-wikipedia.svg/300px-The-amqp-model-for-wikipedia.svg.png" alt="AMQP Model" width="300" height="225" /></a> AMQP Model (Photo credit: Wikipedia)[/caption]
-
 I have been working with middleware systems for the last 8 years, building and using them in many ways. And even after all this I must say that there is lot of confusion in my head as to what a messaging platform must offer and what it should do. Confusion not because I don't know my stuff, but more because you can solve the problem in more ways than one.
+
+<a href="http://en.wikipedia.org/wiki/File:Rvrd-multicasting.jpg" target="_blank"><img  title="300" src="http://upload.wikimedia.org/wikipedia/en/thumb/5/58/Rvrd-multicasting.jpg/300px-Rvrd-multicasting.jpg" alt="300" width="300" height="191" /></a> 300 (Photo credit: Wikipedia)
+
+<a href="http://commons.wikipedia.org/wiki/File:The-amqp-model-for-wikipedia.svg" target="_blank"><img  title="AMQP Model" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/The-amqp-model-for-wikipedia.svg/300px-The-amqp-model-for-wikipedia.svg.png" alt="AMQP Model" width="300" height="225" /></a> AMQP Model (Photo credit: Wikipedia)
 
 Sometime back I was looking at the <a title="AMQP" href="http://en.wikipedia.org/wiki/AMQP" target="_blank">AMQP</a> standard to understand the state of the art in terms of messaging protocols other than <a  title="Java Message Service" href="http://en.wikipedia.org/wiki/Java_Message_Service" rel="wikipedia" target="_blank">JMS</a> which I use a lot. I quickly realized that there was <a title="ZeroMQ" href="http://www.zeromq.org/" target="_blank">ZeroMQ</a> which was built by iMatix who were part of AMQP but moved away. While AMQP defines the wire format of the message and works on a broker based model, ZeroMQ tries a brokerless model. There is an interesting discussion on the <a  title="RabbitMQ" href="http://www.rabbitmq.com" rel="homepage" target="_blank">RabbitMQ</a> website which talks about these two approaches - <a href="http://www.rabbitmq.com/blog/2010/09/22/broker-vs-brokerless/">http://www.rabbitmq.com/blog/2010/09/22/broker-vs-brokerless/</a>.
 
@@ -18,7 +18,7 @@ That made me think about all these years and what kind of problems was I solving
 
 This post is a discussion of how to go about understanding the problem that you are trying to solve.
 
-<!--more-->
+
 <h2>A few stories from the past</h2>
 I started my career building adapters for <a  title="TIBCO Rendezvous" href="http://www.tibco.com/software/messaging/rendezvous" rel="homepage" target="_blank">TIBCO Rendezvous</a>. My company was a <a  title="Tibco Software" href="http://www.tibco.com/" rel="homepage" target="_blank">TIBCO</a> partner, and we could get to build the cool adapters which were used for various <a  title="Enterprise application integration" href="http://en.wikipedia.org/wiki/Enterprise_application_integration" rel="wikipedia" target="_blank">Enterprise Application Integration</a>(EAI) projects that everyone was doing. It was a great messaging platform which allowed publish subscribe and even request reply paradigms. There was guaranteed delivery too and messages could be recorded. Once in a while we found that when we used guaranteed delivery and the subscriber was not immediately available, the messages would get stored in journal files, the files would grow and then at some point the while messaging would slow down. So we tried to avoid these cases.
 

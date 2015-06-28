@@ -12,7 +12,7 @@ But we don't - we repeat the process again next time we miss a estimate.
 
 This post is an attempt to understand a few issues with estimates.
 
-<!--more-->
+
 
 What do we need to give an estimate anyways?
 <ul>

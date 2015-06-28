@@ -12,7 +12,7 @@ I have been envangelising Django for a while to my friends and have recently sta
 
 This post is a collection of few things that I like - its not an exhaustive list, and you can find out more by visiting <a href="https://www.djangoproject.com/">https://www.djangoproject.com/</a> and trying it for yourself.
 
-<!--more-->
+
 <h2><img title="More..." src="https://supercoderz.wordpress.com/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif" alt="" />What is Django?</h2>
 Taken from their website, this is what is Django
 <blockquote>Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.</blockquote>

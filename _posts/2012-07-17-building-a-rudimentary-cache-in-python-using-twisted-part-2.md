@@ -10,7 +10,7 @@ I decided to go ahead and try using the cache that I built for some scenario tha
 
 What I wanted to see was if it is possible to use my cache in a similar way in Python , obviously with fewer lines of code. See the below screen shots for the updated code and the execution results.
 
-<!--more-->
+
 
 <a href="http://supercoderz.files.wordpress.com/2012/07/enhanced_cache1.png"><img class="aligncenter size-large wp-image-379" title="enhanced_cache" src="http://supercoderz.files.wordpress.com/2012/07/enhanced_cache1.png?w=1024" alt="" width="1024" height="577" /></a>
 

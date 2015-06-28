@@ -8,14 +8,14 @@ categories:
 
 <div >
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Hudson_Screenshot.png"><img title="Hudson Screenshot" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Hudson_Screenshot.png/300px-Hudson_Screenshot.png" alt="Hudson Screenshot" width="300" height="232" /></a>[/caption]
+
 
 </div>
 One of the recommended and widely followed practices in agile and fast paced projects is to use a continuous build system. Usually this is a <a  title="CruiseControl" href="http://cruisecontrol.sourceforge.net" rel="homepage">CruiseControl</a> or <a  title="Hudson (software)" href="http://hudson-ci.org" rel="homepage">Hudson</a> or some such build tool hooked into the source control system and scheduled to build periodically. With a disciplined team of developers who test their code and do not commit code that does not work and breaks everyones builds, this is a good thing.
 
 But does this solve all problems?
 
-<!--more-->
+
 
 Anyone who has worked in a tightly controlled and regulated production environment like in a bank will know that the worst part starts after the build - when it comes to deployment. You need to make sure that the right version of the code is deployed on all servers with the right configurations etc etc. In a system that has been built from scratch and from the beginning compliant with deployment best practices, it is possible to have glitch free deployments. Also it is possible to have code deployed from tags or branches in the source control system and life will be good.
 

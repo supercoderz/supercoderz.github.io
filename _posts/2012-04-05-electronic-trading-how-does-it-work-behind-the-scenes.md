@@ -6,11 +6,11 @@ comments: false
 categories:
 ---
 
-[caption id="" align="alignright" width="300" caption="The floor of the Chicago Board of Trade, a major commodities exchange in the United States. (Photo credit: Wikipedia)"]<a href="http://commons.wikipedia.org/wiki/File:Chicago_bot.jpg" target="_blank"><img  title="The floor of the Chicago Board of Trade, a maj..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Chicago_bot.jpg/300px-Chicago_bot.jpg" alt="The floor of the Chicago Board of Trade, a maj..." width="300" height="220" /></a>[/caption]
-
 <a  title="Electronic trading" href="http://en.wikipedia.org/wiki/Electronic_trading" rel="wikipedia" target="_blank">Electronic Trading</a> or Computer <a  title="Trade" href="http://en.wikipedia.org/wiki/Trade" rel="wikipedia" target="_blank">Trading</a> - whichever name you use for this - is how most financial markets work these days.Not just stocks or cash products,  even commodities are traded electronically. All this is driven by huge <a  title="Computer" href="http://en.wikipedia.org/wiki/Computer" rel="wikipedia" target="_blank">computer systems</a> that work very fast and very efficiently and handle huge volumes at large scales.
 
 Its the best thing - until it fails.
+
+<a href="http://commons.wikipedia.org/wiki/File:Chicago_bot.jpg" target="_blank"><img  title="The floor of the Chicago Board of Trade, a maj..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Chicago_bot.jpg/300px-Chicago_bot.jpg" alt="The floor of the Chicago Board of Trade, a maj..." width="300" height="220" /></a>
 
 This article today on Bloomberg only highlights some of the complications involved in these - <a href="http://www.bloomberg.com/news/2012-04-04/sec-puts-exchanges-on-notice-over-computer-driven-trades.html">http://www.bloomberg.com/news/2012-04-04/sec-puts-exchanges-on-notice-over-computer-driven-trades.html</a>.
 
@@ -20,7 +20,7 @@ While I am no expert in these and definitely have no idea how each of the many d
 
 As a note - if you already work in the financial domain or build some of these systems for a living - I might oversimplify or may be outright wrong in some cases - please point out any flaws in the comments and I will definitely make corrections.
 
-<!--more-->
+
 <h2>How was it before electronic trading?</h2>
 So what are exchanges? What is trading?
 
