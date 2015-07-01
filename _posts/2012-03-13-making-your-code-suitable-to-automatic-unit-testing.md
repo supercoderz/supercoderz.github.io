@@ -14,6 +14,7 @@ The fantasy is best described by this article about <a  title="Google" href="htt
 
 The other extreme is best described by this Hitler meme video -
 
+{% youtube T-Qn_-F2x1c %}
 <iframe width="420" height="315" src="https://www.youtube.com/watch?NR=1&amp;feature=endscreen&amp;v=T-Qn_-F2x1c" frameborder="0" allowfullscreen></iframe>
 
 So, why do I get such extreme emotions? And is it so difficult to get unit tests? You can get there and have the best automatic unit testing experience - but first you must prepare your code for unit testing.
